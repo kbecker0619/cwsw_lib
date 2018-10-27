@@ -15,5 +15,4 @@ File | Description
 :--- | :---
 .cproject | Eclipse project file
 .project  | Eclipse project file for this component
-cwsw_lib.cws  | LW-CVI Workspace for this component
-cwsw_lib.prj  | LW-CVI project file for this component
+cwsw_lib.prj  | LW-CVI project file for this component, ready to import into workspace

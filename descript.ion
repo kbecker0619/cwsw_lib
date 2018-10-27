@@ -1,0 +1,10 @@
+.cproject Eclipse project file
+.project Eclipse project file
+cfg Project-specific configuration headers
+cvibuild.cwsw_lib LW-CVI
+cwsw_lib.cws LW-CVI Workspace for this component
+cwsw_lib.prj LW-CVI project file
+descript.ion 7-Zip file that provides file commentary
+doc Documentation folder for this component
+src Container for the CWSW LIB submodule
+ut Unit Test sources for this component
