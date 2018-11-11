@@ -1,4 +1,4 @@
 [submodule "src"]
-	path = src
+	path = cwsw_lib
 	url = git@github.com:kbecker0619/cwsw_lib_core.git
 	branch = development
