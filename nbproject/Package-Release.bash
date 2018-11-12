@@ -13,8 +13,8 @@ CND_BUILDDIR=build
 CND_DLIB_EXT=dll
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cwsw_lib.git
-OUTPUT_BASENAME=cwsw_lib.git
+OUTPUT_PATH=${TESTDIR}/TestFiles/f1
+OUTPUT_BASENAME=f1
 PACKAGE_TOP_DIR=cwswlib.git/
 
 # Functions

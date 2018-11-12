@@ -13,6 +13,10 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-src/src \
+build/Debug/Cygwin-Windows/_ext/2066400048 \
+build/Debug/Cygwin-Windows/tests/ut/tests \
+build/Debug/Cygwin-Windows/ut \
+cwsw_lib/src \
 ut \
+ut/tests \
 

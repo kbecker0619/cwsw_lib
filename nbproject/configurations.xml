@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="95">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="dummyut" projectFiles="true" kind="ROOT">
+      <itemPath>ut/main.c</itemPath>
+    </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
@@ -23,15 +26,17 @@
         </logicalFolder>
         <itemPath>C:/_Projects/pdev2/cwsw_lib.git/cwsw_lib/src/cwsw_lib.c</itemPath>
       </logicalFolder>
-      <logicalFolder name="ut" displayName="ut" projectFiles="true">
-        <itemPath>ut/cwsw_lib_test.c</itemPath>
-        <itemPath>ut/readme.md</itemPath>
-      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
                    projectFiles="false"
                    kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f2"
+                     displayName="cwsw_lib_test"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>ut/cwsw_lib_test.c</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -57,6 +62,7 @@
       </toolsSet>
       <compileType>
         <cTool>
+          <standard>10</standard>
           <incDir>
             <pElem>cwsw_lib</pElem>
             <pElem>cfg</pElem>
@@ -64,7 +70,14 @@
           <preprocessorList>
             <Elem>XPRJ_NB_${CONF}</Elem>
           </preprocessorList>
+          <warningLevel>2</warningLevel>
         </cTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="C:/_Projects/pdev2/cwsw_lib.git/cwsw_lib/src/cwsw_lib.c"
             ex="false"
@@ -77,11 +90,19 @@
       </item>
       <item path="cwsw_lib/cwsw_lib.h" ex="false" tool="3" flavor2="0">
       </item>
+      <folder path="TestFiles/f2">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
       <item path="src/include/ptypes.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="ut/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="ut/readme.md" ex="false" tool="3" flavor2="0">
+      <item path="ut/main.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -103,6 +124,14 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="C:/_Projects/pdev2/cwsw_lib.git/cwsw_lib/src/cwsw_lib.c"
             ex="false"
@@ -115,11 +144,19 @@
       </item>
       <item path="cwsw_lib/cwsw_lib.h" ex="false" tool="3" flavor2="0">
       </item>
+      <folder path="TestFiles/f2">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
       <item path="src/include/ptypes.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="ut/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="ut/readme.md" ex="false" tool="3" flavor2="0">
+      <item path="ut/main.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>
