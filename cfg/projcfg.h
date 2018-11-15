@@ -105,9 +105,9 @@ extern "C" {
 	#define XPRJ_Debug_Linux_GCC	0
 
 #elif defined(XPRJ_NB_Debug)
-    #define XPRJ_Debug_Win_MinGW    0
-    #define XPRJ_Debug_MSC			0
-    #define	XPRJ_Debug_CVI			0
+	#define XPRJ_Debug_Win_MinGW    0
+	#define XPRJ_Debug_MSC			0
+	#define	XPRJ_Debug_CVI			0
 	#define XPRJ_Debug_Linux_GCC	0
 
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
@@ -123,12 +123,12 @@ extern "C" {
 	#define XPRJ_Debug_Win_MinGW	false
 	#define	XPRJ_Debug_CVI			false
 
-#elif (_CVI_)
-	#define	XPRJ_Debug_CVI			1
+#elif defined(XPRJ_CVI_Debug)
 	#define	XPRJ_Debug_MSC			0
 	#define	XPRJ_Debug_Win_MinGW 	0
 	#define XPRJ_Debug_Linux_GCC	0
-
+	#define XPRJ_NB_Debug			0
+	
 #else
 #error Must define Eclipse symbol XPRJ_${ConfigName}
 

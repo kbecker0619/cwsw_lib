@@ -56,3 +56,4 @@ dkms.conf
 *.bak
 /Debug/
 /build/
+cvibuild.cwsw_lib
