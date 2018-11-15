@@ -64,7 +64,8 @@ NotificationHandler__evTerminateRequested(tNotificationPayload EventData)
 /*
  *
  */
-int main(int argc, char** argv)
+int
+main(int argc, char** argv)
 {
 	tNotificationPayload ev = { 0 };
 
@@ -73,4 +74,3 @@ int main(int argc, char** argv)
 
     return (EXIT_SUCCESS);
 }
-

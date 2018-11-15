@@ -54,19 +54,19 @@
 // ----	Public Functions ------------------------------------------------------
 // ============================================================================
 
-static int 
+static int
 init_suite(void)
 {
     return Get(Cwsw_Lib, Initialized);
 }
 
-static int 
+static int
 clean_suite(void)
 {
     return !Get(Cwsw_Lib, Initialized);
 }
 
-static void 
+static void
 init_lib()
 {
     CU_ASSERT(!Init(Cwsw_Lib));
@@ -77,7 +77,8 @@ void test2()
     CU_ASSERT(2 * 2 == 4);
 }
 
-int main(void)
+int
+main(void)
 {
 	CU_pSuite pSuite = NULL;
 
@@ -96,7 +97,7 @@ int main(void)
 	}
 
 	/* Add the tests to the suite */
-	if( (NULL == CU_add_test(pSuite, "ConfirmUninit", init_lib))    || 
+	if( (NULL == CU_add_test(pSuite, "ConfirmUninit", init_lib))    ||
         (NULL == CU_add_test(pSuite, "test2", test2)))
 	{
 		CU_cleanup_registry();
