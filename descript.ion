@@ -1,14 +1,15 @@
 .cproject Eclipse project file
 .project Eclipse project file
+app "Main" definition for dummy component application
 build NetBeans build folder
 cfg Project-specific configuration headers
 cvibuild.cwsw_lib LW-CVI
-cwsw_lib GIT SUBMODULE for this component
+cwsw_lib GIT submodule: component implementation
 cwsw_lib.cws LW-CVI Workspace for this component
 cwsw_lib.prj LW-CVI project file
 descript.ion 7-Zip file that provides file commentary
-doc Documentation folder for this component
+doc GIT submodule: Documentation folder for this component
 Makefile NetBeans makefile. Don't corrupt!
 nbproject netBeans project folder
 src Container for the CWSW LIB submodule
-ut Unit Test sources for this component
+ut GIT submodule: Unit Test sources for this component
