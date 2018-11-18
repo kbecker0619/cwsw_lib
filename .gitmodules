@@ -5,3 +5,6 @@
 [submodule "doc"]
 	path = doc
 	url = git@github.com:kbecker0619/cwsw_lib_doc.git
+[submodule "ut"]
+	path = ut
+	url = git@github.com:kbecker0619/cwsw_lib_ut.git
