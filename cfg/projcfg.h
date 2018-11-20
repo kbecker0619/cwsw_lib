@@ -77,6 +77,7 @@ extern "C" {
  * build targets.
  * ========================================================================= */
 /* Configuration Check */
+/* XPRJ (Cross-Compile Project) _ Platform _ Tool _ Config */
 #if defined(XPRJ_Debug)
 	/* This configuration is created by Eclipse; we do not want it used, unless ... */
 	#if (XPRJ_Debug == 99)
@@ -99,7 +100,16 @@ extern "C" {
 	#define	XPRJ_Win_MinGW_Debug 	0
 
 #elif defined(XPRJ_Win_MinGW_Debug)
-	/* This is the configuration intended for development on Windows, using the MinGW tool suite */
+	/* This is the configuration intended for development on Windows, using MinGW */
+	#define XPRJ_Win_MinGW_UT		0
+	#define XPRJ_MSVC_Debug			0
+	#define XPRJ_NB_Debug			0
+	#define	XPRJ_CVI_Debug			0
+	#define XPRJ_Debug_Linux_GCC	0
+
+#elif defined(XPRJ_Win_MinGW_UT)
+	/* This is the configuration intended for unit test development on Windows, using GCOV */
+	#define XPRJ_Win_MinGW_Debug	0
 	#define XPRJ_MSVC_Debug			0
 	#define XPRJ_NB_Debug			0
 	#define	XPRJ_CVI_Debug			0
@@ -114,7 +124,7 @@ extern "C" {
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
 
-#elif (XPRJ_MSVC_Debug)
+#elif defined(XPRJ_MSVC_Debug)
 	/* Visual Studio 8, which is decidedly shy of C11 */
 	/* NOTE: VS8 does not ship w/ headers <stdint.h> or <stdbool.h>, so i found alternate versions
 	 * and copied them into my install directory. i happened to find some web sites w/ versions
@@ -150,7 +160,11 @@ extern "C" {
  *	define. Pick reasonable defaults if not defined.
  */
 #if !defined(BUILD_FOR_UNIT_TEST)
-	#if (XPRJ_Debug_Linux_GCC) || (XPRJ_Win_MinGW_Debug) || (XPRJ_MSVC_Debug) || (XPRJ_CVI_Debug)
+	#if (XPRJ_Debug_Linux_GCC)	||	\
+		(XPRJ_Win_MinGW_Debug)	||	\
+		(XPRJ_Win_MinGW_UT)		||	\
+		(XPRJ_MSVC_Debug) ||		\
+		(XPRJ_CVI_Debug)
 		#define BUILD_FOR_UNIT_TEST		(true)
 
 	#else
@@ -189,7 +203,7 @@ extern "C" {
 #define WEAK __weak
 
 #elif defined(_MSC_VER) || defined(_CVI_)	/* visual studio 8 and LabWindows/CVI v7.1 */
-/* WEAK not available */
+#define	WEAK	/* WEAK not available */
 
 #else
 #error Unrecognized or unsupported compiler
