@@ -117,9 +117,10 @@ extern "C" {
 
 #elif defined(XPRJ_NB_Debug)
 	#define XPRJ_Win_MinGW_Debug    0
+	#define XPRJ_Win_MinGW_UT		0
+	#define XPRJ_Debug_Linux_GCC	0
 	#define XPRJ_MSVC_Debug			0
 	#define	XPRJ_CVI_Debug			0
-	#define XPRJ_Debug_Linux_GCC	0
 
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
@@ -131,14 +132,18 @@ extern "C" {
 	 * that claimed to work w/ VS8 or VS10, but you could also probably pull them from any other
 	 * compiler you may have installed
 	 */
-	#define XPRJ_Win_MinGW_Debug	false
-	#define	XPRJ_CVI_Debug			false
-
-#elif defined(XPRJ_CVI_Debug)
-	#define	XPRJ_MSVC_Debug			0
-	#define	XPRJ_Win_MinGW_Debug 	0
+	#define XPRJ_Win_MinGW_Debug	0
+	#define XPRJ_Win_MinGW_UT		0
 	#define XPRJ_Debug_Linux_GCC	0
 	#define XPRJ_NB_Debug			0
+	#define	XPRJ_CVI_Debug			0
+
+#elif defined(XPRJ_CVI_Debug)
+	#define	XPRJ_Win_MinGW_Debug 	0
+	#define XPRJ_Win_MinGW_UT		0
+	#define XPRJ_Debug_Linux_GCC	0
+	#define XPRJ_NB_Debug			0
+	#define	XPRJ_MSVC_Debug			0
 
 #else
 #error Must define Eclipse symbol XPRJ_${ConfigName}

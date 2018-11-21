@@ -1,4 +1,5 @@
 .cproject Eclipse project file
+.dep.inc NetBeans makefile component
 .project Eclipse project file
 app "Main" definition for dummy component application
 build NetBeans build folder
@@ -7,6 +8,7 @@ cvibuild.cwsw_lib LW-CVI
 cwsw_lib GIT submodule: component implementation
 cwsw_lib.cws LW-CVI Workspace for this component
 cwsw_lib.prj LW-CVI project file
+cwsw_lib.vcproj MSVC++ 2008 project file
 descript.ion 7-Zip file that provides file commentary
 doc GIT submodule: Documentation folder for this component
 Makefile NetBeans makefile. Don't corrupt!
