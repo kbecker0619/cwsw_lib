@@ -107,6 +107,7 @@ extern "C" {
 
 #elif defined(XPRJ_NB_Debug)
 	#define XPRJ_Win_MinGW_Debug    0
+	#define XPRJ_Win_MinGW_UT       0
 	#define XPRJ_MSVC_Debug			0
 	#define	XPRJ_CVI_Debug			0
 	#define XPRJ_Debug_Linux_GCC	0
