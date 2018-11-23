@@ -58,3 +58,8 @@ dkms.conf
 /build/
 cvibuild.cwsw_lib
 .settings
+MSVC_Debug
+*.ncb
+*.sln
+*.suo
+*.user

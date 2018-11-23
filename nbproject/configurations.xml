@@ -4,6 +4,13 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="cfg" displayName="cfg" projectFiles="true">
+        <itemPath>cfg/projcfg.h</itemPath>
+        <itemPath>cfg/projevtnames.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="include" displayName="include" projectFiles="true">
+        <itemPath>src/include/ptypes.h</itemPath>
+      </logicalFolder>
       <itemPath>cwsw_lib/cwsw_lib.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -13,14 +20,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="cfg" displayName="cfg" projectFiles="true">
-        <itemPath>cfg/projcfg.h</itemPath>
-        <itemPath>cfg/projevtnames.h</itemPath>
-      </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
-        <logicalFolder name="include" displayName="include" projectFiles="true">
-          <itemPath>src/include/ptypes.h</itemPath>
-        </logicalFolder>
         <itemPath>cwsw_lib/src/cwsw_lib.c</itemPath>
       </logicalFolder>
       <itemPath>app/main.c</itemPath>
