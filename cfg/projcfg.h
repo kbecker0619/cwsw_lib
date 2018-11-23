@@ -1,9 +1,9 @@
-/** @file projcfg.h
- *	@brief	One-sentence short description of file.
+/** @file
+ *	@brief	Project Configuration for CWSW Library Unit test environment
  *
  *	Description:
  *
- *	Copyright (c) Kevin L. Becker. All rights reserved.
+ *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
  *	Created on: Sep 4, 2016
@@ -39,7 +39,7 @@ extern "C" {
 // ============================================================================
 #define PROJCFG_H__REVSTRING "$Revision: 09042016 $"
 
-
+// ==== PROJECT-INVARIANT CONSTANTS ========================================= {
 /* ==== A WORD ABOUT BUILD TARGETS ============================================
  *	Within Eclipse, the configuration is available as an IDE variable named
  *		"${ConfigName}"
@@ -54,7 +54,7 @@ extern "C" {
  *	Compatibility, for example with MPLAB X.
  *
  *	Within the NetBeans IDE used by MPLAB X, the equivalent mechanism is to
- *	detect off the command-line define "XPRJ_<config>",
+ *	detect off the command-line define "XPRJ_NB_${CONF}",
  *		"#if defined(XPRJ_Debug)"
  *
  *	Note the name of the default configuration created by MPLAB X' New Project
@@ -64,17 +64,23 @@ extern "C" {
  *	Within my development environment, I let Eclipse' New Project Wizard create
  *	its standard Debug and Release configurations, then create new ones for on-
  *	target debugging, as required. I assume my Windows/Linux Debug configuration
- *	is also intended for unit tests, so I rather indiscriminently print things
+ *	is also intended for unit tests, so I rather indiscriminately print things
  *	to the console.
  * ========================================================================= */
 
-/*	==== A FOLLOW-UP WORD ABOUT BUILD TARGETS ==================================
- * ANSI/ISO C says that the preprocesser evaluates and undefined symbol as having
+/* ==== A FOLLOW-UP WORD ABOUT BUILD TARGETS ==================================
+ * ANSI/ISO C says that the preprocessor evaluates an undefined symbol as having
  * the value '0' - however, many of the environments i'm targeting, and also many
- * of the static analysis tools, emit warnings about usage of undefined symbols.
- * in normal C code - and i have a rather strong aversion to using #if defined(x)
- * mechanisms in normal code. therefore, i'll here define all of the non-active
- * build targets.
+ * of the static analysis tools, emit warnings about usage of undefined symbols
+ * in normal C code - and even though i do it when necessary, i have a rather
+ * strong aversion to using #if defined(x) mechanisms in normal code.
+ * therefore, i'll here define all of the non-active build targets.
+ * ========================================================================= */
+
+/* ==== One final word ========================================================
+ * This section is intended to be pristine and unchanged for all projects.
+ * Configuration-specific defines (aka options specific to one of these Build
+ * Targets) should be done in a followup section below.
  * ========================================================================= */
 /* Configuration Check */
 /* XPRJ (Cross-Compile Project) _ Platform _ Tool _ Config */
@@ -130,7 +136,7 @@ extern "C" {
 	/* NOTE: VS8 does not ship w/ headers <stdint.h> or <stdbool.h>, so i found alternate versions
 	 * and copied them into my install directory. i happened to find some web sites w/ versions
 	 * that claimed to work w/ VS8 or VS10, but you could also probably pull them from any other
-	 * compiler you may have installed
+	 * compiler you may have installed.
 	 */
 	#define XPRJ_Win_MinGW_Debug	0
 	#define XPRJ_Win_MinGW_UT		0
@@ -146,8 +152,21 @@ extern "C" {
 	#define	XPRJ_MSVC_Debug			0
 
 #else
-#error Must define Eclipse symbol XPRJ_${ConfigName}
+#error Must define command-line symbol XPRJ_${ConfigName}
 
+#endif
+
+// ====	/PROJECT-INVARIANT CONSTANTS ======================================== }
+
+// ==== PROJECT SPECIFIC CONSTANTS ========================================== {
+// todo: pull in stuff from gen 0 of this same project
+#if (XPRJ_Debug_Linux_GCC)
+	/* enable or disable individual architectural features */
+#endif
+
+#if (XPRJ_CVI_Debug)
+	// use cwsw simulated events to achieve separation between UI panels
+	#define USE_NOTIFICATION_EVENTS		(1)
 #endif
 
 
@@ -168,7 +187,8 @@ extern "C" {
 	#if (XPRJ_Debug_Linux_GCC)	||	\
 		(XPRJ_Win_MinGW_Debug)	||	\
 		(XPRJ_Win_MinGW_UT)		||	\
-		(XPRJ_MSVC_Debug) ||		\
+		(XPRJ_NB_Debug)			||  \
+		(XPRJ_MSVC_Debug) 		||  \
 		(XPRJ_CVI_Debug)
 		#define BUILD_FOR_UNIT_TEST		(true)
 
@@ -177,6 +197,8 @@ extern "C" {
 
 	#endif
 #endif
+
+// ==== /PROJECT SPECIFIC CONSTANTS ========================================= }
 
 
 // ============================================================================

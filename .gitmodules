@@ -3,7 +3,7 @@
 	url = git@github.com:kbecker0619/cwsw_lib_core.git
 	branch = development
 [submodule "doc"]
-	path = doc
+	path = new_doc/lib_doc
 	url = git@github.com:kbecker0619/cwsw_lib_doc.git
 [submodule "ut"]
 	path = ut
