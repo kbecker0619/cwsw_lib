@@ -63,3 +63,5 @@ MSVC_Debug
 *.sln
 *.suo
 *.user
+.dep.inc
+Makefile
