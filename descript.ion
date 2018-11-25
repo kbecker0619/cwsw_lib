@@ -4,7 +4,7 @@
 app "Main" definition for dummy component application
 build NetBeans build folder
 cfg Project-specific configuration headers
-cvibuild.cwsw_lib LW-CVI
+cvibuild.cwsw_lib LW-CVI build folder
 cwsw_lib GIT submodule: component implementation
 cwsw_lib.cws LW-CVI Workspace for this component
 cwsw_lib.prj LW-CVI project file
