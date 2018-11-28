@@ -1,6 +1,6 @@
-cwsw_lib.doxyfile Component-specific Doxy project
-cwsw_lib.klb.doxyfile Personalized Doxy project for developer 'klb'
-descript.ion 7-Zip file that provides file commentary
-doxygen Doxygen output folder
-lib_doc Container for all documentation related to this component
-readme.md This folder is the container for documentation for the components found in this repo
+cwsw_lib.doxyfile		Component-specific Doxy project
+cwsw_lib.klb.doxyfile	Personalized Doxy project for developer 'klb'
+descript.ion	7-Zip file that provides file commentary
+doxygen 		Doxygen output folder
+doc_lib			Container for all documentation related to this component
+readme.md 		This folder is the container for documentation for the components found in this repo
