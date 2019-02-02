@@ -8,6 +8,3 @@
 [submodule "ut"]
 	path = ut
 	url = git@github.com:kbecker0619/cwsw_lib_ut.git
-[submodule "doc/doc_lib"]
-	path = doc/doc_lib
-	url = git@github.com:kbecker0619/cwsw_lib_doc.git

@@ -2,3 +2,4 @@ Makefile-impl.mk
 Makefile-Release.mk
 Makefile-variables.mk
 Makefile-Debug.mk
+Package-Release.bash
