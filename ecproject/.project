@@ -23,4 +23,31 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>app</name>
+			<type>2</type>
+			<location>C:/_Projects/personal/cwsw_lib.git/app</location>
+		</link>
+		<link>
+			<name>cfg</name>
+			<type>2</type>
+			<location>C:/_Projects/personal/cwsw_lib.git/cfg</location>
+		</link>
+		<link>
+			<name>cwsw_lib</name>
+			<type>2</type>
+			<location>C:/_Projects/personal/cwsw_lib.git/cwsw_lib</location>
+		</link>
+		<link>
+			<name>doc</name>
+			<type>2</type>
+			<location>C:/_Projects/personal/cwsw_lib.git/doc</location>
+		</link>
+		<link>
+			<name>ut</name>
+			<type>2</type>
+			<location>C:/_Projects/personal/cwsw_lib.git/ut</location>
+		</link>
+	</linkedResources>
 </projectDescription>

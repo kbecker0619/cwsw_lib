@@ -18,11 +18,15 @@ that can be called by any application or driver layer module.
 Folder			| Description
 :--- 			| :---
 cwsw_lib		| GIT submodule: Container for the CWSW LIB submodule
-app				| demo app that illustrates how to use this component
-cfg				| Project-specific configuration headers (demo app)
 doc				| GIT submodule: Documentation folder for this component
 ut				| GIT submodule: Unit Test sources for this component
-
+---				| ---
+app				| demo app that illustrates how to use this component
+cfg				| Project-specific configuration headers (demo app)
+---				| ---
+ecproject		| Home for the Eclipse project files
+nbproject		| NetBeans project files
+vsproject		| VS2010 project home
 
 ## Important files
 Almost all of the files in the root directory, are for various IDEs and build environments supported by this component.
