@@ -54,7 +54,7 @@
 // ============================================================================
 
 void
-NotificationHandler__evTerminateRequested(tNotificationPayload EventData)
+EventHandler__TerminateRequested(tEventPayload EventData)
 {
 	UNUSED(EventData);
 	(void)puts("Goodbye Cruel World!");
@@ -67,10 +67,10 @@ NotificationHandler__evTerminateRequested(tNotificationPayload EventData)
 int
 main(void)
 {
-	tNotificationPayload ev = { 0 };
+	tEventPayload ev = { 0 };
 
 	(void)Init(Cwsw_Lib);
-	SendNotification(evTerminateRequested, ev);
+	PostEvent(evTerminateRequested, ev);
 
     return (EXIT_SUCCESS);
 }

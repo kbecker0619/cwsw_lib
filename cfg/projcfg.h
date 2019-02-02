@@ -102,13 +102,13 @@ extern "C" {
 	/* The 1st is intended to debug on a PowerPC Target from a Linux development environment */
 	/* The 2nd (Desktop) is intended for building within S32DS on Linux for a Linux debugging session */
 	#define	XPRJ_CVI_Debug			0
-	#define	XPRJ_MSVC_Debug			0
+	#define	XPRJ_Win_MSVC_Debug		0
 	#define	XPRJ_Win_MinGW_Debug 	0
 
 #elif defined(XPRJ_Win_MinGW_Debug)
 	/* This is the configuration intended for development on Windows, using MinGW */
 	#define XPRJ_Win_MinGW_UT		0
-	#define XPRJ_MSVC_Debug			0
+	#define XPRJ_Win_MSVC_Debug		0
 	#define XPRJ_NB_Debug			0
 	#define	XPRJ_CVI_Debug			0
 	#define XPRJ_Debug_Linux_GCC	0
@@ -116,7 +116,7 @@ extern "C" {
 #elif defined(XPRJ_Win_MinGW_UT)
 	/* This is the configuration intended for unit test development on Windows, using GCOV */
 	#define XPRJ_Win_MinGW_Debug	0
-	#define XPRJ_MSVC_Debug			0
+	#define XPRJ_Win_MSVC_Debug		0
 	#define XPRJ_NB_Debug			0
 	#define	XPRJ_CVI_Debug			0
 	#define XPRJ_Debug_Linux_GCC	0
@@ -125,13 +125,13 @@ extern "C" {
 	#define XPRJ_Win_MinGW_Debug    0
 	#define XPRJ_Win_MinGW_UT		0
 	#define XPRJ_Debug_Linux_GCC	0
-	#define XPRJ_MSVC_Debug			0
+	#define XPRJ_Win_MSVC_Debug		0
 	#define	XPRJ_CVI_Debug			0
 
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
 
-#elif defined(XPRJ_MSVC_Debug)
+#elif defined(XPRJ_Win_MSVC_Debug)
 	/* Visual Studio 8, which is decidedly shy of C11 */
 	/* NOTE: VS8 does not ship w/ headers <stdint.h> or <stdbool.h>, so i found alternate versions
 	 * and copied them into my install directory. i happened to find some web sites w/ versions
@@ -149,7 +149,7 @@ extern "C" {
 	#define XPRJ_Win_MinGW_UT		0
 	#define XPRJ_Debug_Linux_GCC	0
 	#define XPRJ_NB_Debug			0
-	#define	XPRJ_MSVC_Debug			0
+	#define	XPRJ_Win_MSVC_Debug		0
 
 #else
 #error Must define command-line symbol XPRJ_${ConfigName}
@@ -188,7 +188,7 @@ extern "C" {
 		(XPRJ_Win_MinGW_Debug)	||	\
 		(XPRJ_Win_MinGW_UT)		||	\
 		(XPRJ_NB_Debug)			||  \
-		(XPRJ_MSVC_Debug) 		||  \
+		(XPRJ_Win_MSVC_Debug)	||  \
 		(XPRJ_CVI_Debug)
 		#define BUILD_FOR_UNIT_TEST		(true)
 
