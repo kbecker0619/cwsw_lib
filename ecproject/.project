@@ -27,22 +27,22 @@
 		<link>
 			<name>app</name>
 			<type>2</type>
-			<location>C:/_Projects/personal/cwsw_lib.git/app</location>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/app</locationURI>
 		</link>
 		<link>
 			<name>cfg</name>
 			<type>2</type>
-			<location>C:/_Projects/personal/cwsw_lib.git/cfg</location>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/cfg</locationURI>
 		</link>
 		<link>
 			<name>cwsw_lib</name>
 			<type>2</type>
-			<location>C:/_Projects/personal/cwsw_lib.git/cwsw_lib</location>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/cwsw_lib</locationURI>
 		</link>
 		<link>
 			<name>doc</name>
 			<type>2</type>
-			<location>C:/_Projects/personal/cwsw_lib.git/doc</location>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/doc</locationURI>
 		</link>
 		<link>
 			<name>ut</name>
