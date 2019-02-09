@@ -1,4 +1,4 @@
-/** @file main.c
+/** @file
  *	@brief	Primary Unit Test file for the CWSW Lib component.
  *
  *	Description:
