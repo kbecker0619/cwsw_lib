@@ -3,7 +3,7 @@
 #	and provides a customization of it specifically for this developer.
 
 # include the actual component doxy project
-@INCLUDE		 =  doc_lib/cwsw_lib.doxyfile
+@INCLUDE		 = doc_lib/cwsw_lib.doxyfile
 
 LAYOUT_FILE      = doc_lib/Doxy_Layout.xml
 IMAGE_PATH       = doc_lib/images

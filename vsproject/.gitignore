@@ -1,6 +1,5 @@
-*.filters
-*.user
-*
+Debug
 *.sdf
 *.sln
 *.suo
+*.user
