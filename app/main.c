@@ -54,7 +54,13 @@
 // ============================================================================
 
 void
-EventHandler__TerminateRequested(tEventPayload EventData)
+EventHandler__evNotInit(tEventPayload EventData)
+{
+	UNUSED(EventData);
+}
+
+void
+EventHandler__evTerminateRequested(tEventPayload EventData)
 {
 	UNUSED(EventData);
 	(void)puts("Goodbye Cruel World!");
@@ -69,7 +75,13 @@ main(void)
 {
 	tEventPayload ev = { 0 };
 
-	(void)Init(Cwsw_Lib);
+	if(!Get(Cwsw_Lib, Initialized))
+	{
+		PostEvent(evNotInit, ev);
+		(void)Init(Cwsw_Lib);
+		cwsw_assert(Get(Cwsw_Lib, Initialized), "Confirm initialization");
+	}
+
 	PostEvent(evTerminateRequested, ev);
 
     return (EXIT_SUCCESS);

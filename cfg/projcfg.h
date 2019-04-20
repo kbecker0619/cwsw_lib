@@ -179,6 +179,11 @@ extern "C" {
 #else
 #endif
 
+/*	For this component, equate simulated events with notification events. */
+#if defined(USE_NOTIFICATION_EVENTS)
+#define USE_SIMULATED_EVENTS	(true)
+#endif
+
 
 /*	Allow for the possibility that BUILD_FOR_UNIT_TEST might be a command-line
  *	define. Pick reasonable defaults if not defined.
