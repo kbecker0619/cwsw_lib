@@ -43,10 +43,10 @@ extern "C" {
  * Event. Other than that,
  */
 enum eProjectEvents {
-	evNoEvent,				//!< reserved value, used for initialization
-	evNotInit,              //!< evNotInit
-	evButtonPressed,
-	evButtonCommit,			//!< debounced press event
+	evNoEvent,				/**< reserved value, used for initialization */
+	evNotInit,              /**< By CWSW convention, 1 is always "component not initialized" */
+	evButtonPressed,		/**< BY CWSW convention, 2 is "already initialized" */
+	evButtonCommit,			/**< debounced press event */
 	evButtonReleased,
 	evUpdateUi,
 	evTerminateRequested

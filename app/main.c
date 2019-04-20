@@ -80,6 +80,11 @@ main(void)
 		PostEvent(evNotInit, ev);
 		(void)Init(Cwsw_Lib);
 		cwsw_assert(Get(Cwsw_Lib, Initialized), "Confirm initialization");
+
+		/* contrived example, not recommended, to exercise other features of the component */
+		int protct = Cwsw_Critical_Protect(0);
+		cwsw_assert(Init(Cwsw_Lib) == 2, "Confirm reinitialization");
+		cwsw_assert(Cwsw_Critical_Release(protct) == 0, "Confirm balanced critical region usage");
 	}
 
 	PostEvent(evTerminateRequested, ev);
