@@ -1,5 +1,5 @@
-/** @file projevtnames.h
- *	@brief	One-sentence short description of file.
+/** @file 
+ *	@brief	Project-specific event enumerations for simulated events.
  *
  *	Description:
  *
