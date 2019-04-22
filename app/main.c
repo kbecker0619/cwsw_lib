@@ -67,6 +67,10 @@ EventHandler__evTerminateRequested(tEventPayload EventData)
 }
 
 
+/** Dummy symbol to resolve task API */
+#define Cwsw_Lib__Task()	do { } while(0)
+
+
 /*
  *
  */
@@ -80,11 +84,13 @@ main(void)
 		PostEvent(evNotInit, ev);
 		(void)Init(Cwsw_Lib);
 		cwsw_assert(Get(Cwsw_Lib, Initialized), "Confirm initialization");
-                
+
 		/* contrived example, not recommended, to exercise other features of the component */
 		int protct = Cwsw_Critical_Protect(0);
 		cwsw_assert(Init(Cwsw_Lib) == 2, "Confirm reinitialization");
 		cwsw_assert(Cwsw_Critical_Release(protct) == 0, "Confirm balanced critical region usage");
+
+		Task(Cwsw_Lib);
 	}
 
 	PostEvent(evTerminateRequested, ev);
