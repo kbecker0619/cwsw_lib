@@ -1,4 +1,4 @@
-/** @file 
+/** @file
  *	@brief	Project-specific event enumerations for simulated events.
  *
  *	Description:
@@ -45,8 +45,9 @@ extern "C" {
 enum eProjectEvents {
 	evNoEvent,				/**< reserved value, used for initialization */
 	evNotInit,              /**< By CWSW convention, 1 is always "component not initialized" */
-	evButtonPressed,		/**< BY CWSW convention, 2 is "already initialized" */
-	evButtonCommit,			/**< debounced press event */
+	evAlreadyInit,			/**< BY CWSW convention, 2 is "already initialized" */
+	evButtonPressed,		/**< debounced press event */
+	evButtonCommit,
 	evButtonReleased,
 	evUpdateUi,
 	evTerminateRequested
