@@ -244,9 +244,34 @@ extern "C" {
 #endif
 
 
-//	=== dev-on-PC API =========================================================
+/**	Project-specific configuration to engage Critical Section / Protected Region
+ *	behavior.
+ *
+ *	For the demo app + UT environment for the CWSW Library, we'll define this
+ *	as a macro that supplies information that might be useful to the UT enviro.
+ *
+ *	@xreq{SR_LIB_0307}
+ *
+ *	@ingroup cwsw_lib_crit_section_group
+ */
+#define CWSW_LIB_CRIT_SECT_ENTER(protlvl)	cb_lib_demo_cs_enter(protlvl, __FILE__, __LINE__)
+extern void cb_lib_demo_cs_enter(int protlvl, char const * const filename, int const lineno);
 
-
+/**	Project-specific configuration, invoked when Critical Section is already
+ *	active.
+ *
+ *	Normally, we recommend the definition of:
+ *		do {} while(0)
+ *
+ *	For this project's UT environment, we'll define this as a macro that
+ *	supplies info that might be useful to the UT enviro.
+ *
+ *	@xreq{SR_LIB_0308}
+ *
+ *	@ingroup cwsw_lib_crit_section_group
+ */
+#define	CWSW_LIB_CRIT_SECT_ENTER_NOP(protlvl)	cb_lib_demo_cs_enter_nop(protlvl, __FILE__, __LINE__)
+extern void cb_lib_demo_cs_enter_nop(int protlvl, char const * const filename, int const lineno);
 
 // define specifically for Eclipse CDT parser
 #ifdef __CDT_PARSER__
