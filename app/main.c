@@ -108,7 +108,7 @@ cb_lib_demo_cs_enter(int protlvl, char const * const filename, int const lineno)
 }
 
 void
-cb_lib_demo_cs_enter_nop(int protlvl, char const * const filename, int const lineno)
+cb_lib_demo_cs_leave(int protlvl, char const * const filename, int const lineno)
 {
 	crit_section_seen = true;
 	crit_sec_prot_lvl = (0 == protlvl) ? INT_MAX : -protlvl;

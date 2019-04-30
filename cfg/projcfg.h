@@ -270,8 +270,9 @@ extern void cb_lib_demo_cs_enter(int protlvl, char const * const filename, int c
  *
  *	@ingroup cwsw_lib_crit_section_group
  */
-#define	CWSW_LIB_CRIT_SECT_ENTER_NOP(protlvl)	cb_lib_demo_cs_enter_nop(protlvl, __FILE__, __LINE__)
-extern void cb_lib_demo_cs_enter_nop(int protlvl, char const * const filename, int const lineno);
+#define	CWSW_LIB_CRIT_SECT_LEAVE(protlvl)	cb_lib_demo_cs_leave(protlvl, __FILE__, __LINE__)
+extern void cb_lib_demo_cs_leave(int protlvl, char const * const filename, int const lineno);
+
 
 // define specifically for Eclipse CDT parser
 #ifdef __CDT_PARSER__
