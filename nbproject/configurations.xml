@@ -95,12 +95,18 @@
       <item path="cwsw_lib/cwsw_lib.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="cwsw_lib/src/cwsw_lib.c" ex="false" tool="0" flavor2="0">
+        <cTool>
+          <architecture>0</architecture>
+          <commandLine>-fprofile-arcs -ftest-coverage</commandLine>
+          <additionalDep></additionalDep>
+        </cTool>
       </item>
       <folder path="TestFiles">
         <linkerTool>
           <linkerLibItems>
             <linkerOptionItem>`pkg-config --libs cunit`</linkerOptionItem>
           </linkerLibItems>
+          <commandLine>-fprofile-arcs -ftest-coverage</commandLine>
         </linkerTool>
       </folder>
       <folder path="TestFiles/f2">
