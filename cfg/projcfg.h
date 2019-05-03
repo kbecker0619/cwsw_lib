@@ -85,6 +85,7 @@ extern "C" {
 /* Configuration Check */
 /* XPRJ (Cross-Compile Project) _ Platform _ Tool _ Config */
 #if defined(XPRJ_Debug)
+#error
 	/* This configuration is created by Eclipse; we do not want it used, unless ... */
 	#if (XPRJ_Debug == 99)
 		#pragma message "Building Within Atmel Studio"
@@ -98,58 +99,62 @@ extern "C" {
 	#error For now, do not build with the "Release" build target active
 
 #elif defined(XPRJ_Debug_Linux_GCC) || defined(XPRJ_Debug_Linux_GCC_Desktop)
+#error
 	/* This is the configuration intended for development & debugging in a Linux VM */
 	/* The 1st is intended to debug on a PowerPC Target from a Linux development environment */
 	/* The 2nd (Desktop) is intended for building within S32DS on Linux for a Linux debugging session */
-	#define	XPRJ_CVI_Debug			0
-	#define	XPRJ_Win_MSVC_Debug		0
-	#define	XPRJ_Win_MinGW_Debug 	0
+	#define	XPRJ_CVI_Debug				0
+	#define	XPRJ_Win_MSVC_Debug			0
+	#define	XPRJ_Win_MinGW_Debug	 	0
 
 #elif defined(XPRJ_Win_MinGW_Debug)
 	/* This is the configuration intended for development on Windows, using MinGW */
-	#define XPRJ_Win_MinGW_UT		0
-	#define XPRJ_Win_MSVC_Debug		0
-	#define XPRJ_NB_Debug			0
-	#define	XPRJ_CVI_Debug			0
-	#define XPRJ_Debug_Linux_GCC	0
+	#define XPRJ_Win_Cygwin_Debug_UT	0
+	#define XPRJ_Win_MSVC_Debug			0
+	#define XPRJ_NB_Debug				0
+	#define	XPRJ_CVI_Debug				0
+	#define XPRJ_Debug_Linux_GCC		0
 
-#elif defined(XPRJ_Win_MinGW_UT)
+#elif defined(XPRJ_Win_Cygwin_Debug_UT)
 	/* This is the configuration intended for unit test development on Windows, using GCOV */
-	#define XPRJ_Win_MinGW_Debug	0
-	#define XPRJ_Win_MSVC_Debug		0
-	#define XPRJ_NB_Debug			0
-	#define	XPRJ_CVI_Debug			0
-	#define XPRJ_Debug_Linux_GCC	0
+	#define XPRJ_Win_MinGW_Debug		0
+	#define XPRJ_Win_MSVC_Debug			0
+	#define XPRJ_NB_Debug				0
+	#define	XPRJ_CVI_Debug				0
+	#define XPRJ_Debug_Linux_GCC		0
 
 #elif defined(XPRJ_NB_Debug)
-	#define XPRJ_Win_MinGW_Debug    0
-	#define XPRJ_Win_MinGW_UT		0
-	#define XPRJ_Debug_Linux_GCC	0
-	#define XPRJ_Win_MSVC_Debug		0
-	#define	XPRJ_CVI_Debug			0
+	#define XPRJ_Win_MinGW_Debug		0
+	#define XPRJ_Win_Cygwin_Debug_UT	0
+	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_Win_MSVC_Debug			0
+	#define	XPRJ_CVI_Debug				0
 
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
+#error
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
 
 #elif defined(XPRJ_Win_MSVC_Debug)
+#error
 	/* Visual Studio 8, which is decidedly shy of C11 */
 	/* NOTE: VS8 does not ship w/ headers <stdint.h> or <stdbool.h>, so i found alternate versions
 	 * and copied them into my install directory. i happened to find some web sites w/ versions
 	 * that claimed to work w/ VS8 or VS10, but you could also probably pull them from any other
 	 * compiler you may have installed.
 	 */
-	#define XPRJ_Win_MinGW_Debug	0
-	#define XPRJ_Win_MinGW_UT		0
-	#define XPRJ_Debug_Linux_GCC	0
-	#define XPRJ_NB_Debug			0
-	#define	XPRJ_CVI_Debug			0
+	#define XPRJ_Win_MinGW_Debug		0
+	#define XPRJ_Win_Cygwin_Debug_UT	0
+	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_NB_Debug				0
+	#define	XPRJ_CVI_Debug				0
 
 #elif defined(XPRJ_CVI_Debug)
-	#define	XPRJ_Win_MinGW_Debug 	0
-	#define XPRJ_Win_MinGW_UT		0
-	#define XPRJ_Debug_Linux_GCC	0
-	#define XPRJ_NB_Debug			0
-	#define	XPRJ_Win_MSVC_Debug		0
+#error
+	#define	XPRJ_Win_MinGW_Debug 		0
+	#define XPRJ_Win_Cygwin_Debug_UT	0
+	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_NB_Debug				0
+	#define	XPRJ_Win_MSVC_Debug			0
 
 #else
 #error Must define command-line symbol XPRJ_${ConfigName}
@@ -189,11 +194,11 @@ extern "C" {
  *	define. Pick reasonable defaults if not defined.
  */
 #if !defined(BUILD_FOR_UNIT_TEST)
-	#if (XPRJ_Debug_Linux_GCC)	||	\
-		(XPRJ_Win_MinGW_Debug)	||	\
-		(XPRJ_Win_MinGW_UT)		||	\
-		(XPRJ_NB_Debug)			||  \
-		(XPRJ_Win_MSVC_Debug)	||  \
+	#if (XPRJ_Debug_Linux_GCC)		||	\
+		(XPRJ_Win_MinGW_Debug)		||	\
+		(XPRJ_Win_Cygwin_Debug_UT)	||	\
+		(XPRJ_NB_Debug)				||  \
+		(XPRJ_Win_MSVC_Debug)		||  \
 		(XPRJ_CVI_Debug)
 		#define BUILD_FOR_UNIT_TEST		(true)
 

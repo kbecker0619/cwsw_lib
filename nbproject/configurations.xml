@@ -24,6 +24,7 @@
         <itemPath>cwsw_lib/src/cwsw_lib.c</itemPath>
       </logicalFolder>
       <itemPath>app/main.c</itemPath>
+      <itemPath>app/sim_event_cb.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -88,6 +89,8 @@
       </compileType>
       <item path="app/main.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="app/sim_event_cb.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="cfg/projcfg.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="cfg/projevtnames.h" ex="false" tool="3" flavor2="0">
@@ -97,7 +100,6 @@
       <item path="cwsw_lib/src/cwsw_lib.c" ex="false" tool="0" flavor2="0">
         <cTool>
           <architecture>0</architecture>
-          <commandLine>-fprofile-arcs -ftest-coverage</commandLine>
           <additionalDep></additionalDep>
         </cTool>
       </item>
@@ -106,7 +108,6 @@
           <linkerLibItems>
             <linkerOptionItem>`pkg-config --libs cunit`</linkerOptionItem>
           </linkerLibItems>
-          <commandLine>-fprofile-arcs -ftest-coverage</commandLine>
         </linkerTool>
       </folder>
       <folder path="TestFiles/f2">
@@ -163,6 +164,8 @@
         </linkerTool>
       </compileType>
       <item path="app/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="app/sim_event_cb.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="cfg/projcfg.h" ex="false" tool="3" flavor2="0">
       </item>
