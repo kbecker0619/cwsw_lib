@@ -135,7 +135,6 @@ extern "C" {
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
 
 #elif defined(XPRJ_Win_MSVC_Debug)
-#error
 	/* Visual Studio 8, which is decidedly shy of C11 */
 	/* NOTE: VS8 does not ship w/ headers <stdint.h> or <stdbool.h>, so i found alternate versions
 	 * and copied them into my install directory. i happened to find some web sites w/ versions

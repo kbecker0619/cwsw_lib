@@ -72,6 +72,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\app\main.c" />
+    <ClCompile Include="..\app\sim_event_cb.c" />
     <ClCompile Include="..\cwsw_lib\src\cwsw_lib.c" />
   </ItemGroup>
   <ItemGroup>
