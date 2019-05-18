@@ -3,16 +3,16 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>cwsw_lib.git</name>
+            <name>cwsw_lib</name>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>test/ut</sourceRootElem>
-                <sourceRootElem>test/cfg</sourceRootElem>
-                <sourceRootElem>src</sourceRootElem>
+                <sourceRootElem>ut</sourceRootElem>
+                <sourceRootElem>cfg</sourceRootElem>
+                <sourceRootElem>../src</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
