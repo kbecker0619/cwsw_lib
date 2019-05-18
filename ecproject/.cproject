@@ -62,7 +62,7 @@
 						</tool>
 					</fileInfo>
 					<sourceEntries>
-						<entry excluding="ut|nbproject/private/c_standard_headers_indexer.c|ut.save" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="ut|ut.save|nbproject/private/c_standard_headers_indexer.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -250,7 +250,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.589593890.107281904." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cygwin.base.4578179" name="Cygwin GCC" nonInternalBuilderId="cdt.managedbuild.target.gnu.builder.cygwin.base" superClass="cdt.managedbuild.toolchain.gnu.cygwin.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.Cygwin_PE" id="cdt.managedbuild.target.gnu.platform.cygwin.base.976506583" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.cygwin.base"/>
-							<builder buildPath="${workspace_loc:/cwsw_lib}/Debug" id="cdt.managedbuild.builder.gnu.cross.1829373070" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/cwsw_lib}/Debug" id="cdt.managedbuild.builder.gnu.cross.1829373070" keepEnvironmentInBuildfile="true" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.cygwin.base.1680348404" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.cygwin.base">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1458050387" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -315,7 +315,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="app/main.c|ut.save" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="test/app/main.c|ut.save|app/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -328,7 +328,9 @@
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="XPRJ_Debug_Linux_GCC"/>
-		<configuration configurationName="Debug_UT"/>
+		<configuration configurationName="Debug_UT">
+			<resource resourceType="PROJECT" workspacePath="/cwsw_lib"/>
+		</configuration>
 		<configuration configurationName="Debug">
 			<resource resourceType="PROJECT" workspacePath="/cwsw_lib"/>
 		</configuration>

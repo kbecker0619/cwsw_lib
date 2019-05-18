@@ -23,8 +23,8 @@
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>cwsw_lib/src/cwsw_lib.c</itemPath>
       </logicalFolder>
-      <itemPath>app/main.c</itemPath>
-      <itemPath>app/sim_event_cb.c</itemPath>
+      <itemPath>test/app/main.c</itemPath>
+      <itemPath>test/app/sim_event_cb.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -87,9 +87,9 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </compileType>
-      <item path="app/main.c" ex="false" tool="0" flavor2="0">
+      <item path="test/app/main.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="app/sim_event_cb.c" ex="false" tool="0" flavor2="0">
+      <item path="test/app/sim_event_cb.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="cfg/projcfg.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -163,9 +163,9 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="app/main.c" ex="false" tool="0" flavor2="0">
+      <item path="test/app/main.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="app/sim_event_cb.c" ex="false" tool="0" flavor2="0">
+      <item path="test/app/sim_event_cb.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="cfg/projcfg.h" ex="false" tool="3" flavor2="0">
       </item>
