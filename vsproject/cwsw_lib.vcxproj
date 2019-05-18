@@ -46,7 +46,7 @@
       <WarningLevel>EnableAllWarnings</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\cwsw_lib;..\test\app;..\cfg;..\cfg\vs2010</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\test\app;..\cfg;..\cfg\vs2010</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4668</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -79,10 +79,10 @@
     <ClInclude Include="..\cfg\projcfg.h" />
     <ClInclude Include="..\cfg\projevtnames.h" />
     <ClInclude Include="..\cfg\vs2010\stdbool.h" />
-    <ClInclude Include="..\cwsw_lib\ctassert.h" />
-    <ClInclude Include="..\cwsw_lib\cwsw_eventsim.h" />
-    <ClInclude Include="..\cwsw_lib\cwsw_lib.h" />
-    <ClInclude Include="..\cwsw_lib\include\ptypes.h" />
+    <ClInclude Include="..\include\ctassert.h" />
+    <ClInclude Include="..\include\cwsw_eventsim.h" />
+    <ClInclude Include="..\include\cwsw_lib.h" />
+    <ClInclude Include="..\include\include\ptypes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

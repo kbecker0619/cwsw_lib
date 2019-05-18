@@ -10,9 +10,9 @@
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>ut</sourceRootElem>
+                <sourceRootElem>test/ut</sourceRootElem>
                 <sourceRootElem>cfg</sourceRootElem>
-                <sourceRootElem>cwsw_lib</sourceRootElem>
+                <sourceRootElem>src</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
