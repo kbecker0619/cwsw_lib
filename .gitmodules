@@ -6,5 +6,5 @@
 	path = doc/doc_lib
 	url = git@github.com:kbecker0619/cwsw_lib_doc.git
 [submodule "ut"]
-	path = ut
+	path = test/ut
 	url = git@github.com:kbecker0619/cwsw_lib_ut.git
