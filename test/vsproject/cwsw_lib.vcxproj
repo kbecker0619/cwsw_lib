@@ -71,18 +71,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\test\app\main.c" />
-    <ClCompile Include="..\src\cwsw_lib.c" />
-    <ClCompile Include="..\test\app\sim_event_cb.c" />
+    <ClCompile Include="..\app\main.c" />
+    <ClCompile Include="..\..\src\cwsw_lib.c" />
+    <ClCompile Include="..\app\sim_event_cb.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\test\cfg\projcfg.h" />
     <ClInclude Include="..\test\cfg\projevtnames.h" />
     <ClInclude Include="..\test\cfg\vs2010\stdbool.h" />
-    <ClInclude Include="..\include\ctassert.h" />
-    <ClInclude Include="..\include\cwsw_eventsim.h" />
-    <ClInclude Include="..\include\cwsw_lib.h" />
-    <ClInclude Include="..\include\include\ptypes.h" />
+    <ClInclude Include="..\..\include\ctassert.h" />
+    <ClInclude Include="..\..\include\cwsw_eventsim.h" />
+    <ClInclude Include="..\..\include\cwsw_lib.h" />
+    <ClInclude Include="..\..\include\ptypes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
