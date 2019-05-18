@@ -25,24 +25,34 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>app</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/app</locationURI>
+		</link>
+		<link>
+			<name>cfg</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/cfg</locationURI>
+		</link>
+		<link>
 			<name>doc</name>
 			<type>2</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/doc</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/doc</locationURI>
 		</link>
 		<link>
 			<name>include</name>
 			<type>2</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/include</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/include</locationURI>
 		</link>
 		<link>
 			<name>src</name>
 			<type>2</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/src</locationURI>
 		</link>
 		<link>
 			<name>test</name>
 			<type>2</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/test</locationURI>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/test</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
