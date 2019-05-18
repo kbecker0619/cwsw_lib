@@ -46,7 +46,7 @@
       <WarningLevel>EnableAllWarnings</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;..\test\app;..\test\cfg;..\test\cfg\vs2010</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;..\app;..\cfg;..\cfg\vs2010</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4668</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -76,9 +76,9 @@
     <ClCompile Include="..\app\sim_event_cb.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\test\cfg\projcfg.h" />
-    <ClInclude Include="..\test\cfg\projevtnames.h" />
-    <ClInclude Include="..\test\cfg\vs2010\stdbool.h" />
+    <ClInclude Include="..\cfg\projcfg.h" />
+    <ClInclude Include="..\cfg\projevtnames.h" />
+    <ClInclude Include="..\cfg\vs2010\stdbool.h" />
     <ClInclude Include="..\..\include\ctassert.h" />
     <ClInclude Include="..\..\include\cwsw_eventsim.h" />
     <ClInclude Include="..\..\include\cwsw_lib.h" />
