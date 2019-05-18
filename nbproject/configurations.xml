@@ -9,7 +9,7 @@
         <itemPath>cfg/projevtnames.h</itemPath>
       </logicalFolder>
       <logicalFolder name="include" displayName="include" projectFiles="true">
-        <itemPath>src/include/ptypes.h</itemPath>
+        <itemPath>cwsw_lib/include/ptypes.h</itemPath>
       </logicalFolder>
       <itemPath>cwsw_lib/cwsw_lib.h</itemPath>
     </logicalFolder>
@@ -21,7 +21,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
-        <itemPath>cwsw_lib/src/cwsw_lib.c</itemPath>
+        <itemPath>src/cwsw_lib.c</itemPath>
       </logicalFolder>
       <itemPath>test/app/main.c</itemPath>
       <itemPath>test/app/sim_event_cb.c</itemPath>
@@ -97,7 +97,7 @@
       </item>
       <item path="cwsw_lib/cwsw_lib.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="cwsw_lib/src/cwsw_lib.c" ex="false" tool="0" flavor2="0">
+      <item path="src/cwsw_lib.c" ex="false" tool="0" flavor2="0">
         <cTool>
           <architecture>0</architecture>
           <additionalDep></additionalDep>
@@ -118,7 +118,7 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="src/include/ptypes.h" ex="false" tool="3" flavor2="0">
+      <item path="cwsw_lib/include/ptypes.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="test/ut/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -173,7 +173,7 @@
       </item>
       <item path="cwsw_lib/cwsw_lib.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="cwsw_lib/src/cwsw_lib.c" ex="false" tool="0" flavor2="0">
+      <item path="src/cwsw_lib.c" ex="false" tool="0" flavor2="0">
       </item>
       <folder path="TestFiles/f2">
         <linkerTool>
