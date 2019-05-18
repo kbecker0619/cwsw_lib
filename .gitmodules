@@ -1,7 +1,3 @@
-[submodule "src"]
-	path = cwsw_lib
-	url = git@github.com:kbecker0619/cwsw_lib_code.git
-	branch = development
 [submodule "doc"]
 	path = doc/doc_lib
 	url = git@github.com:kbecker0619/cwsw_lib_doc.git

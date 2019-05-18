@@ -11,7 +11,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>test/ut</sourceRootElem>
-                <sourceRootElem>cfg</sourceRootElem>
+                <sourceRootElem>test/cfg</sourceRootElem>
                 <sourceRootElem>src</sourceRootElem>
             </sourceRootList>
             <confList>

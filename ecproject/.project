@@ -25,16 +25,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>cfg</name>
-			<type>2</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/cfg</locationURI>
-		</link>
-		<link>
-			<name>cwsw_lib</name>
-			<type>2</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/cwsw_lib</locationURI>
-		</link>
-		<link>
 			<name>doc</name>
 			<type>2</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/doc</locationURI>
