@@ -1,12 +1,9 @@
-# Requirements: CWSW Library Component
+# Requirements: CWSW Arch Component
 
-\tableofcontents 
-
-[TOC]
 
 ## Purpose of Component
 
-The CWSW Library Component provides the foundation of the dependency tree for the CWSW suite of 
+The CWSW Arch Component provides sde foundation of the dependency tree for the CWSW suite of 
 reusable software components. They are primarily intended for use in an embedded environment, but 
 they may find utility in a variety of environments.
 
