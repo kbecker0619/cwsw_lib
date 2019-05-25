@@ -49,11 +49,9 @@ extern "C" {
 // ----	Public API ------------------------------------------------------------
 // ============================================================================
 
+// ==== Discrete Functions ================================================== {
 /** Module initialization function. */
 extern uint16_t 			Cwsw_Lib__Init(void);
-
-/** Retrieve the component's initialization status. */
-extern bool 				Cwsw_Lib__Get_Initialized(void);
 
 /** @defgroup	cwsw_lib_crit_section_group	Critical Section / Protected Region API
  *
@@ -76,8 +74,26 @@ extern int Cwsw_Critical_Protect(int cs_prot_level);
 extern int Cwsw_Critical_Release(int cs_prot_level);
 /**	@} */
 
+// ==== /Discrete Functions ================================================= }
 
-//	===	definitions common to all environments ================================
+// ==== Targets for Get/Set APIs ============================================ {
+/** "Chapter Designator" for Get/Set API.
+ *	Intentionally unused symbol, designed to get you to the correct starting
+ *	point, when you want to find macros for the Get/Set API; simply highlight
+ *	the Module argument in your IDE (e.g, Eclipse, NetBeans, etc.), and select
+ *	Go To Definition.
+ */
+enum { Cwsw_Lib = 0 };	/**< Module-specific identifier, used in API macros */
+
+/** Target symbol for Get(Cwsw_Lib, xxx) interface */
+#define Cwsw_Lib__Get(a)				Cwsw_Lib__Get_ ## a()
+
+/** Retrieve the component's initialization status. */
+extern bool 				Cwsw_Lib__Get_Initialized(void);
+
+// ==== /Targets for Get/Set APIs =========================================== }
+
+// ====	definitions common to all environments ============================== {
 
 #if defined (__GNUC__)					/*{*/
 /** GNU's recommended implementation of macros using _Pragma keyword */
@@ -247,15 +263,6 @@ extern int Cwsw_Critical_Release(int cs_prot_level);
 #if !defined(UNUSED)
 #define UNUSED(x) (void)x
 #endif
-
-
-/** "Chapter Designator" for Get/Set API.
- *	Intentionally unused symbol, designed to get you to the correct starting
- *	point, when you want to find macros for the Get/Set API; simply highlight
- *	the Module argument in your IDE (e.g, Eclipse, NetBeans, etc.), and select
- *	Go To Definition.
- */
-enum { Cwsw_Lib = 0 };	/**< Module-specific identifier, used in API macros */
 
 
 /*  Initialize API description for the CWSW Library components (all of them) */
@@ -454,9 +461,7 @@ extern void cwsw_assert_helper(char const * const test, char const * const filen
 //	#pragma GCC diagnostic pop
 #endif
 
-
-/** Target symbol for Get(Cwsw_Lib, xxx) interface */
-#define Cwsw_Lib__Get(a)				Cwsw_Lib__Get_ ## a()
+// ====	/definitions common to all environments ============================= }
 
 
 #ifdef	__cplusplus
