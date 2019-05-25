@@ -416,8 +416,8 @@ typedef void (*fpTask)(void);
 	#define PRIVATE						/* nothing */
 
 #else
-	/**	when built on a PC, it's likely i want to see module elements that we would
-	 *	otherwise want to keep secret.
+	/**	When not built for debugging, it's unlikely we want to see module elements exposed to the
+	 *	world.
 	 */
 	#define PRIVATE						static
 

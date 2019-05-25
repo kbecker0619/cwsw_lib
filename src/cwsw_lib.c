@@ -40,7 +40,7 @@
 // ============================================================================
 // ----	Module-level Variables ------------------------------------------------
 // ============================================================================
-static char const * const cwsw_lib_RevString = "$Revision: 0123 $";
+static char const * const cwsw_lib_RevString = "$Revision: 0.2.0 $";
 
 /** "Has this module been initialized?" flag.
  *	For the CWSW Library, the import of this flag is less than in most modules;
@@ -120,14 +120,17 @@ Cwsw_Lib__Init(void)
 		(XPRJ_Win_MSVC_Debug)		||  \
 		(XPRJ_CVI_Debug) )
 	{
-		disable_console_buffering();
+		if(BUILD_FOR_UNIT_TEST)
+		{
+			disable_console_buffering();
 
-		SUPPRESS_EXTRAISO_IDENT;	/* suppress warning for function name */
-		dbg_printf(
-				"\tModule ID %i\t%s\t%s\n"
-				"\tEntering %s()\n\n",
-				Cwsw_Lib, __FILE__, cwsw_lib_RevString,
-				__FUNCTION__);
+			SUPPRESS_EXTRAISO_IDENT;	/* suppress warning for function name */
+			dbg_printf(
+					"\tModule ID %i\t%s\t%s\n"
+					"\tEntering %s()\n\n",
+					Cwsw_Lib, __FILE__, cwsw_lib_RevString,
+					__FUNCTION__);
+		}
 		RESTORE_WARNING_CONTEXT;
 	}
 	RESTORE_WARNING_CONTEXT;
