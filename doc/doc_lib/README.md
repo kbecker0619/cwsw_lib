@@ -1,2 +1,4 @@
-# cwsw_lib_doc
-Documentation for the Lib component. Intended to be a submodule in the integration project repo.
+@page cwsw_lib Component: CWSW Library
+# CWSW Library Component Documentation
+
+Documentation for the Lib component.

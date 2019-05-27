@@ -168,10 +168,10 @@
 	 *	with a numeric value other than zero or false, then a function-like macro is enabled that
 	 *	disables console buffering: <code>disable_console_buffering()</code>.
 	 *
-	 *	In addition, if either of those symbols are defined, or if the library detects that it's
+	 *	~~In addition, if either of those symbols are defined, or if the library detects that it's
 	 *	being compiled in LabWindows/CVI or MS Studio Visual C, a new symbol for defining the
-	 *	storage class of a symbol is defined: <code>#PRIVATE</code>. The purpose of this symbol is
-	 *	to allow visibility into module-specific symbols for Unit Testing purposes.
+	 *	storage class of a symbol is defined: <code>PRIVATE</code>. The purpose of this symbol is
+	 *	to allow visibility into module-specific symbols for Unit Testing purposes.~~
 	 *
 	 */
 

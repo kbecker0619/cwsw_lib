@@ -1,15 +1,12 @@
+@page cwsw_lib Component: CWSW Library (overview: documentation folder)
+
 # Project-specific documentation folder for the Library component
 
 ## Overview
 
-This folder replicates the general structure envisioned for all aspects
-of the CWSW Library suite of components.
+This folder contains items that pertain only to this project. 
+The actual component documentation is in the `doc_lib` folder.
 
-Stuff that pertains to this project only, are kept in this folder; the
-component's reusable submodule is in the `doc_lib` folder. The
-project-specific files can be duplicated in the doc folder of the
-projects that use this component; the submodule is intended to be
-inserted in this location as a GIT submodule.
 
 ## Important folders
 

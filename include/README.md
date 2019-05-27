@@ -1,4 +1,6 @@
-# cwsw_lib_core
+@page cwsw_lib Component: CWSW Library
+
+# CWSW Library Component (Core)
 ## Base-level (foundational) Subcomponent for CWSW's library suite
 
 The Library component is designed to be placed at the Services level, and is designed to provide core, stateless, utility functions.
