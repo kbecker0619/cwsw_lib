@@ -3,9 +3,8 @@
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Feb 2, 2017
- *	Author: kbecker
+ *	@author kbecker
  */
 
 #ifndef PTYPES_H_

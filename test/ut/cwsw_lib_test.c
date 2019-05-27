@@ -1,17 +1,10 @@
 /** @file cwsw_lib_test.c
  *	@brief	Primary Unit Test file for the CWSW Lib component.
  *
- *	Description:
- *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Nov 11, 2018
  *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
  */
 
 // ============================================================================
@@ -98,7 +91,7 @@ main(void)
 		tests[1] = CU_add_test(pSuite, "SR_LIB_0001: Initialization Status API", 			test_sr_lib_0001);
 		tests[2] = CU_add_test(pSuite, "SR_LIB_0002: Initialization API Responsibilities",	test_sr_lib_0002);
 		tests[3] = CU_add_test(pSuite, "SR_LIB_0003: Indication when uninitialized",		test_sr_lib_0003);
-		tests[4] = CU_add_test(pSuite, "SR_LIB_0004: Behavior when uninitialized",			test_sr_lib_0005);
+		tests[4] = CU_add_test(pSuite, "SR_LIB_0004: Behavior when uninitialized",			test_sr_lib_0004);
 		if( !tests[0] ||
             !tests[1] ||
             !tests[2] ||

@@ -1,17 +1,10 @@
 /** @file cwsw_lib_test_op_states.c
  *	@brief	One-sentence short description of file.
  *
- *	Description:
- *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Apr 21, 2019
- *	Author: KBECKE35
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
+ *	@author KBECKE35
  */
 
 // ============================================================================
@@ -147,7 +140,7 @@ test_sr_lib_0003(void)
  *  @xreq{SR_LIB_0004}
  */
 void
-test_sr_lib_0005(void)
+test_sr_lib_0004(void)
 {
     CU_FAIL("Test to be created yet");
 }

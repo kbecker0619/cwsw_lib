@@ -1,25 +1,14 @@
 /** @file
  *	@brief	Project-specific event enumerations for simulated events.
  *
- *	Description:
+ *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Copyright (c) 2018 Kevin L. Becker. All rights reserved.
- *
- *	Original:
  *	Created on: Jan 20, 2018
- *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
+ *	@author kbecker
  */
 
 #ifndef UT_PROJEVTNAMES_H_
 #define UT_PROJEVTNAMES_H_
-
-#ifdef	__cplusplus
-extern "C" {
-#endif
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
@@ -30,6 +19,11 @@ extern "C" {
 // ----	Project Headers -------------------------
 
 // ----	Module Headers --------------------------
+
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
 
 
 // ============================================================================

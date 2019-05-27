@@ -2,7 +2,6 @@
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Apr 21, 2019
  *	Author: KBECKE35
  */
@@ -49,7 +48,7 @@ extern void test_sr_lib_0000(void);
 extern void test_sr_lib_0001(void);
 extern void test_sr_lib_0002(void);
 extern void test_sr_lib_0003(void);
-extern void test_sr_lib_0005(void);
+extern void test_sr_lib_0004(void);
 
 
 

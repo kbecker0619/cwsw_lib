@@ -3,9 +3,8 @@
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: May 2, 2019
- *	Author: KBECKE35
+ *	@author KBECKE35
  */
 
 // ============================================================================
