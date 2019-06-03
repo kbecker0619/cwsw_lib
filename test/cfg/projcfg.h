@@ -27,6 +27,7 @@
 extern "C" {
 #endif
 
+
 // ============================================================================
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
@@ -78,7 +79,6 @@ extern "C" {
 /* Configuration Check */
 /* XPRJ (Cross-Compile Project) _ Platform _ Tool _ Config */
 #if defined(XPRJ_Debug)
-#error
 	/* This configuration is created by Eclipse; we do not want it used, unless ... */
 	#if (XPRJ_Debug == 99)
 		#pragma message "Building Within Atmel Studio"
@@ -92,7 +92,6 @@ extern "C" {
 	#error For now, do not build with the "Release" build target active
 
 #elif defined(XPRJ_Debug_Linux_GCC) || defined(XPRJ_Debug_Linux_GCC_Desktop)
-#error
 	/* This is the configuration intended for development & debugging in a Linux VM */
 	/* The 1st is intended to debug on a PowerPC Target from a Linux development environment */
 	/* The 2nd (Desktop) is intended for building within S32DS on Linux for a Linux debugging session */
@@ -124,7 +123,6 @@ extern "C" {
 	#define	XPRJ_CVI_Debug				0
 
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
-#error
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
 
 #elif defined(XPRJ_Win_MSVC_Debug)
@@ -181,6 +179,24 @@ extern "C" {
 #define USE_SIMULATED_EVENTS	(true)
 #endif
 
+
+/**	Special "magic" marker for CUNIT unit testing environment.
+ * 	If the command-line define of the CUNIT project defines BUILD_FOR_UNIT_TEST
+ * 	with a value of 99, certain behaviors within the component are different,
+ * 	depending on the needs of the unit test environment.
+ */
+#define CUNIT	99
+
+/**	Special "magic" marker for the CONSOLE- based demo application.
+ * 	If the command-line define of the demo project defines BUILD_FOR_UNIT_TEST
+ * 	with a value of 1, certain behaviors within the component are different,
+ * 	depending on the needs of the demo app environment.
+ *
+ * 	This value specifically chosen because most instances of value #true also
+ * 	have the value "1", so that the default build, in the absence of a command-
+ * 	line define, will enable console behavior.
+ */
+#define CONSOLE	 1
 
 /*	Allow for the possibility that BUILD_FOR_UNIT_TEST might be a command-line
  *	define. Pick reasonable defaults if not defined.

@@ -32,21 +32,9 @@ requirements specific to the Library component.
 | @anchor RQT_LIB_0002 SR_LIB_0002	| Responsibilities of Initialize method | The Initialize method shall set the component's operating internal state to initial status.	| Draft		| N/A			| |
 | @anchor RQT_LIB_0003 SR_LIB_0003	| Component's Uninitialized indication	| If executed prior to initialization, the features of the component that have stateful behavior by design, shall return an `Uninitilialized` indication.	| Draft | N/A	| "Return" could be via callback, component-level attribute, function output parameter, function return code, etc. |
 | @anchor RQT_LIB_0004 SR_LIB_0004	| Component's Uninitialized behavior	| If executed prior to initialization, the features of the component that have stateful behavior by design, shall not change their operating state.			| Draft	| N/A	| |
-
-<br>
-
-### Tasking API
-
-| ID 								| Title 								| Description 																					| Status 	| Trace From	| Comment 	|
-| :---:								| :---									| :---																							| :---		| :---			| :---		|
+| **TASKING  API** ||||||
 | @anchor RQT_LIB_0200 SR_LIB_0200	| Tasking API							| The Component shall provide an API in support of OS tasks or threads.							| Draft		| N/A			| |
-
-<br>
-
-### Critical Sections / Protected Regions
-
-| ID 								| Title 								| Description 																				| Status 	| Trace From	| Comment 	|
-| :---:								| :---									| :---																						| :---		| :---			| :---		|
+| **Critical Sections / Protected Regions**	||||||
 | @anchor RQT_LIB_0300 SR_LIB_0300  | Critical Section API 					| The Component shall provide an API managing Critical Sections (aka Protected Regions).    | Draft     | (tbd)         | |
 | @anchor RQT_LIB_0301 SR_LIB_0301	| Enter Critical Section API            | The Component shall provide an API for entering a Critical Section or Protected Region.	| Draft		| SR_LIB_0300	| |
 | @anchor RQT_LIB_0302 SR_LIB_0302  | Leave Critical Section API            | The Component shall provide an API for leaving a Critical Section or Protected Region.    | Draft     | SR_LIB_0300   | |

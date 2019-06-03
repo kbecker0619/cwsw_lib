@@ -94,7 +94,7 @@ test_sr_lib_0001(void)
 }
 
 
-/** Confirm presence of an API to initialize the component.
+/** @test Confirm presence of an API to initialize the component.
  *  @xreq{SR_LIB_0000}
  */
 void

@@ -74,6 +74,7 @@
             <pElem>cfg</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>BUILD_FOR_UNIT_TEST=1</Elem>
             <Elem>XPRJ_NB_${CONF}</Elem>
           </preprocessorList>
           <warningLevel>2</warningLevel>
@@ -111,6 +112,11 @@
       <item path="cfg/projevtnames.h" ex="false" tool="3" flavor2="0">
       </item>
       <folder path="TestFiles">
+        <cTool>
+          <preprocessorList>
+            <Elem>BUILD_FOR_UNIT_TEST=99</Elem>
+          </preprocessorList>
+        </cTool>
         <linkerTool>
           <linkerLibItems>
             <linkerOptionItem>`pkg-config --libs cunit`</linkerOptionItem>

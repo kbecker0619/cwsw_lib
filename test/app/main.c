@@ -65,9 +65,6 @@ EventHandler__evTerminateRequested(tEventPayload EventData)
 #define Cwsw_Lib__Task()	do { } while(0)
 
 
-/*
- *
- */
 int
 main(void)
 {

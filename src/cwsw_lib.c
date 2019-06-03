@@ -115,7 +115,7 @@ Cwsw_Lib__Init(void)
 		(XPRJ_Win_MSVC_Debug)		||  \
 		(XPRJ_CVI_Debug) )
 	{
-		if(BUILD_FOR_UNIT_TEST)
+		if(BUILD_FOR_UNIT_TEST == CONSOLE)
 		{
 			disable_console_buffering();
 
