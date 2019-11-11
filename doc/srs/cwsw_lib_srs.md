@@ -3,7 +3,7 @@
 <!-- Note: This document is not pure Markdown format: it is intended to be used inside of a
 Doxygen project, and therefore contains some embedded Doxy commands -->
 
-## Purpose of Component
+# Purpose of Component
 
 The CWSW Library Component provides the foundation of the dependency tree for the CWSW suite of 
 reusable software components. They are primarily intended for use in an embedded environment, but 
