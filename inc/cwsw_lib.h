@@ -33,8 +33,6 @@ extern "C" {
 // ============================================================================
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
-#define CWSW_LIB_H__REVSTRING "$Revision: 0123 $"
-
 
 // ============================================================================
 // ----	Type Definitions ------------------------------------------------------
@@ -336,33 +334,44 @@ typedef void (*fpTask)(void);
 /**	Get the value of a module's resource or attribute.
  * <dl><dt><b>Usage:</b></dt><dd>Get(Module, Attribute);</dd></dl>
  * <dl><dt><b>Example:</b></dt><dd><code>bool is_init = Get(Cwsw_Lib, Initialized);</code></dd></dl>
+ *
+ * @{
  */
 #define Get(component, resource)			_GET1(component, resource)
 #define _GET1(component, resource)			component ## __Get(resource)
-
+/** @} */
+ 
 /** Set a module's attribute to the specified value.
  * <dl><dt><b>Usage:</b></dt><dd>Set(Module, Attribute, Value);</dd></dl>
  * <dl><dt><b>Example:</b></dt><dd><code>Set(AudioMeter, NeedleResponse, Dampening_VU);</code></dd></dl>
+ *
+ * @{
  */
 #define Set(component, resource, value)		_SET1(component, resource, value)
 #define _SET1(component, resource, value)	component ## __Set(resource, value)
-
+/** @} */
 
 /** Get the value of a global resource.
  * <dl><dt><b>Usage:</b></dt><dd>GET(GlobalAttribute);</dd></dl>
  * <dl><dt><b>Example:</b></dt><dd><code>GET(DiagnosticsMode);</code></dd></dl>
+ *
+ * @{
  */
 #define GET(item)							_GET2(item)
 #define _GET2(thing)						GET_ ## thing()
-
+/** @} */
+ 
 
 /** Set the value of a global resource.
  *	<dl><dt>@b Usage: </dt><dd>SET(GlobalAttribute, Value);</dd></dl>
  *	<dl><dt>@b Example: </dt><dd><tt>SET(DiagnosticsMode, kDiagMode_Mfg);</tt></dd></dl>
+ *
+ * @{
  */
 #define SET(item, value)					_SET2(item, value)
 #define _SET2(item, value)					SET_ ## item(value)
-
+/** @} */
+ 
 
 /**	Is specified condition true?
  *	@return true if condition is true, false otherwise.

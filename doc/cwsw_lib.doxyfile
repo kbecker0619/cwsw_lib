@@ -2,6 +2,13 @@
 #   This configuration superclasses the generic Doxy configuration for this project, and provides
 #   a customization of it specifically for this component.
 
+# USAGE NOTE:
+#	Due to the way Doxygen processes relative paths, and because we cannot know in
+#	advance the workspace relationship between this folder and the home folder of
+#	the top-level Doxy project, we cannot here specify the core (base-level) Doxy
+#	config, even though it sits as a sister to this file. The caller must ensure
+#	that `cwsw.doxyfile` is included before it includes this file.
+ 
 PROJECT_NAME	 = "CWSW Library Services"
 PROJECT_BRIEF	 = "Core library services for the CWSW family of components for embedded software"
 

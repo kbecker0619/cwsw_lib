@@ -3,6 +3,8 @@
 #	and provides a customization of it specifically for this stand-alone unit.
 
 # =====	Overrides provided by this doxyfile alone ======================
+# include the core (base, foundational) Doxy project settings
+@INCLUDE		= ../../doc/cwsw.doxyfile
 # include the actual component doxy project
 @INCLUDE		 = ../../doc/cwsw_lib.doxyfile
 

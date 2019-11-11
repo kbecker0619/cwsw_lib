@@ -27,8 +27,6 @@ extern "C" {
 // ============================================================================
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
-#define INCLUDE_CTASSERT_H__REVSTRING "$Revision: 0123 $"
-
 
 // ============================================================================
 // ----	Type Definitions ------------------------------------------------------
@@ -42,8 +40,7 @@ extern "C" {
 // ----	Public API ------------------------------------------------------------
 // ============================================================================
 
-/**
- * Compile-time check to see if test condition is valid or not.
+/** Compile-time check to see if test condition is valid or not.
  *
  * This macro, after expansion of the helper macros, generates a compile-time error if the test is invalid. This error
  * will be your compiler's flavor of "invalid array dimension"; if you see this error at the place where you're doing
@@ -62,8 +59,7 @@ extern "C" {
  */
 #define CT_ASSERT(test)              _CTASSERT(__LINE__, test)
 
-/**
- * First-level support macro, designed to work with CT_ASSERT(). It is not intended for direct use in your code.
+/** First-level support macro, designed to work with CT_ASSERT(). It is not intended for direct use in your code.
  *
  * The purpose for this macro is solely and exclusively for the expansion of the __LINE__ argument passed by
  * CT_ASSERT(). The ANSI standard stipulates that when macros are concatenated,  the concatenation happens first, and
@@ -76,8 +72,7 @@ extern "C" {
  */
 #define _CTASSERT(UniqueId, test)   __CTASSERT(UniqueId, test)
 
-/**
- * Second-level support macro, designed to work with CT_ASSERT(). It is not intended for direct use in your code.
+/** Second-level support macro, designed to work with CT_ASSERT(). It is not intended for direct use in your code.
  *
  * This macro uses the unique identifier passed to it, as part of the declaration of an external array. It then uses the
  * \b logical test as the size of the array. If the test is valid, it will evaluate to "1", and so the compiler will
