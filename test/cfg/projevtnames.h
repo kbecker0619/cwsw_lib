@@ -61,7 +61,7 @@ enum eProjectEvents {
 // ============================================================================
 
 
-extern void EventHandler__evNotInit				(tEventPayload EventData);
+extern void EventHandler__evNotInitialized		(tEventPayload EventData);
 extern void EventHandler__evTerminateRequested	(tEventPayload EventData);
 extern void EventHandler__evButtonCommit 		(tEventPayload EventData);
 extern void EventHandler__evButtonPressed		(tEventPayload EventData);

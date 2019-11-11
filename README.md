@@ -2,7 +2,8 @@
 
 ## Overview
 
-This repo holds the full set of documents for the small CWSW Library.
+
+This repo holds the small CWSW Library.
 Being the building block upon which other CWSW components are built, it
 has no dependencies to other CWSW components.
 
@@ -10,6 +11,13 @@ This repo is the composed of a mixture of direct files and folders, and
 GIT submodules for reusable portions of the component; namely, sources,
 documentation, and unit testing (this component uses CUnit, hosted
 natively by NetBeans).
+
+@startuml
+"CWSW Library Core" --|> "OSAL": uses
+"CWSW Library Core" --|> "BSW": uses
+"CWSW Library Core" --|> "SWC": uses
+"CWSW Library Core" --|> "etc...": uses
+@enduml
 
 The source repo for this component is best inserted in the Services
 layer (if you have one). It contains core, stateless, utility functions

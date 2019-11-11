@@ -2,5 +2,6 @@ Debug
 *.sdf
 *.sln
 *.suo
+*.filters
 *.user
 ipch

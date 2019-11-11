@@ -8,7 +8,7 @@
  */
 
 #ifndef PROJCFG_H_
-#define PROJCFG_H_
+#define PROJCFG_H_					/*{*/
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
@@ -175,7 +175,7 @@ extern "C" {
 #endif
 
 /*	For this component, equate simulated events with notification events. */
-#if defined(USE_NOTIFICATION_EVENTS)
+#if (USE_NOTIFICATION_EVENTS) && !defined(USE_SIMULATED_EVENTS)
 #define USE_SIMULATED_EVENTS	(true)
 #endif
 
@@ -297,4 +297,4 @@ extern void cb_lib_demo_cs_leave(int protlvl, char const * const filename, int c
 }
 #endif
 
-#endif /* PROJCFG_H_ */
+#endif /* PROJCFG_H_ */				/*}*/
