@@ -1,0 +1,3 @@
+@INCLUDE			 = cwsw_lib.doxyfile
+PLANTUML_JAR_PATH	 = C:\_Programs\plantuml\
+DOT_PATH			 = "C:\Program Files (x86)\Graphviz2.38\bin"
