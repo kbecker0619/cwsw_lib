@@ -22,3 +22,9 @@ Doxygen project, and therefore contains some embedded Doxy commands -->
 @page Lib_Resources	Resources Provided by and Required by the Library component
 tbd
 
+```plantuml
+@startuml
+cwsw_lib : CT_ASSERT()
+cwsw_lib : size()
+@enduml
+```

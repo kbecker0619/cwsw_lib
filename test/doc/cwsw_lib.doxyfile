@@ -27,7 +27,7 @@ EXCLUDE			+= ../ut/README.md
 INCLUDE_PATH	+= ../ut
 
 
-#======	Overrides identified by the component doxyfile =================
+# ====== Overrides identified by the component doxyfile ================
 LAYOUT_FILE		 = ../../doc/doc_core/Doxy_Layout.xml
 IMAGE_PATH		 = ../../doc/images
 EXCLUDE 		+= ../../doc/images/README.md
