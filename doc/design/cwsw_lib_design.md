@@ -1,4 +1,4 @@
-@page Lib_Design Design: Library Subsystem
+<!-- @page Lib_Design Design: Library Subsystem -->
 
 <!-- Note: This document is not pure Markdown format: it is intended to be used inside of a
 Doxygen project, and therefore contains some embedded Doxy commands -->

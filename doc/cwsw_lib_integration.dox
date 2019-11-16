@@ -2,13 +2,14 @@
 
 /**	@page Lib_Integration						Integrating the Reusable Component
  *	@tableofcontents
- *	To add the facilities of the CWSW Lib component to your project, follow these steps.
+ *	To add the facilities of the CWSW Lib component to your project, follow 
+ *	these steps.
  *
- *	@note Author's note: These steps are generic for all IDEs; however, the specific details
- *	(e.g., screen shots) are oriented toward IDEs based on Eclipse, such as NXP S32DS; ARM DS-5; or
- *	TI's Code Composer.
- *	While I have implemented these steps in Microchip's MPLAB v4.x, the steps are so close that I
- *	didn't feel IDE-specific instructions were required.
+ *	@note Author's note: These steps are generic for all IDEs; however, the specific
+ *	details (e.g., screen shots) are oriented toward IDEs based on Eclipse, such as NXP
+ *	S32DS; ARM DS-5; or TI's Code Composer.
+ *	While I have implemented these steps in Microchip's MPLAB v4.x, the steps are so
+ *	close that I didn't feel IDE-specific instructions were required.
  *
  *	Integration Steps:
  *	-# [Share the Source](#lib_source_share)
@@ -18,8 +19,14 @@
  *	-# Optional APIs.
  */
 
-	/**	@page Lib_Integration
-	 *	@section lib_source_share				Share the Source
+/* klb note:
+ * for layout control, i envision now (mid-Nov, 2019) a page definition:
+ *	@page Lib_Integration
+ * which defines sections, which then define the groups in each section
+ * for the actual content of each section, you would use the "@addtogroup"
+ * command
+ */
+	/**	@section lib_source_share				Share the Source
 	 *	Designed to be a reusable component, the CWSW Library is organized into a reusable section, and
 	 *	requires additional project-specific configuration items in the project.
 	 *
@@ -104,8 +111,7 @@
 	 *
 	 */
 
-	/**	@page Lib_Integration
-	 *	@section lib_update_includes			Update the Includes Paths
+	/**	@section lib_update_includes			Update the Includes Paths
 	 *	Update your build system to add the relative path to the <code>cwsw_lib</code> folder. To
 	 *	clarify what you're looking for, here is the annotation for each of the files in the
 	 *	library project.
@@ -159,8 +165,7 @@
 	 *	@endcode
 	 */
 
-	/**	@page Lib_Integration
-	 *	@section lib_configuration				Configure the Reusable Component
+	/**	@section lib_configuration				Configure the Reusable Component
 	 *	If the CWSW Library finds certain symbols defined on the compiler command line, some minor
 	 *	optional functionality is enabled.
 	 *
@@ -175,8 +180,7 @@
 	 *
 	 */
 
-	/**	@page Lib_Integration
-	 *	@section lib_init_code					Initialize the Reusable Component
+	/**	@section lib_init_code					Initialize the Reusable Component
 	 *	As of the time of this writing, there is little actual initialization required by the
 	 *	Library component itself; however, some functionality does check to see that the library
 	 *	is initialized before it works correctly.
