@@ -1,7 +1,7 @@
 /** @file
  *	@brief	Portable Types
  *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
+ *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Feb 2, 2017
  *	@author kbecker

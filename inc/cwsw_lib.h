@@ -1,7 +1,7 @@
 /** @file
  *	@brief	API for CWSW Library.
  *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
+ *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Jun 4, 2017
  *	@author kbecker
@@ -340,7 +340,7 @@ typedef void (*fpTask)(void);
 #define Get(component, resource)			_GET1(component, resource)
 #define _GET1(component, resource)			component ## __Get(resource)
 /** @} */
- 
+
 /** Set a module's attribute to the specified value.
  * <dl><dt><b>Usage:</b></dt><dd>Set(Module, Attribute, Value);</dd></dl>
  * <dl><dt><b>Example:</b></dt><dd><code>Set(AudioMeter, NeedleResponse, Dampening_VU);</code></dd></dl>
@@ -360,7 +360,7 @@ typedef void (*fpTask)(void);
 #define GET(item)							_GET2(item)
 #define _GET2(thing)						GET_ ## thing()
 /** @} */
- 
+
 
 /** Set the value of a global resource.
  *	<dl><dt>@b Usage: </dt><dd>SET(GlobalAttribute, Value);</dd></dl>
@@ -371,7 +371,7 @@ typedef void (*fpTask)(void);
 #define SET(item, value)					_SET2(item, value)
 #define _SET2(item, value)					SET_ ## item(value)
 /** @} */
- 
+
 
 /**	Is specified condition true?
  *	@return true if condition is true, false otherwise.
