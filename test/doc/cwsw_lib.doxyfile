@@ -4,9 +4,13 @@
 
 # =====	Overrides provided by this doxyfile alone ======================
 # include the core (base, foundational) Doxy project settings
-@INCLUDE		= ../../doc/cwsw.doxyfile
+@INCLUDE		 = ../../doc/doc_core/cwsw.doxyfile
 # include the actual component doxy project
 @INCLUDE		 = ../../doc/cwsw_lib.doxyfile
+
+# set the log file location
+WARN_LOGFILE	 = doxygen.log
+
 
 # configuration inputs
 INPUT           += ../cfg
@@ -23,8 +27,8 @@ EXCLUDE			+= ../ut/README.md
 INCLUDE_PATH	+= ../ut
 
 
-#======	Overrides identified by the component doxyfile =================
-LAYOUT_FILE		 = ../../doc/Doxy_Layout.xml
+# ====== Overrides identified by the component doxyfile ================
+LAYOUT_FILE		 = ../../doc/doc_core/Doxy_Layout.xml
 IMAGE_PATH		 = ../../doc/images
 EXCLUDE 		+= ../../doc/images/README.md
 

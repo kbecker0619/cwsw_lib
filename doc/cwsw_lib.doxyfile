@@ -6,8 +6,8 @@
 #	Due to the way Doxygen processes relative paths, and because we cannot know in
 #	advance the workspace relationship between this folder and the home folder of
 #	the top-level Doxy project, we cannot here specify the core (base-level) Doxy
-#	config, even though it sits as a sister to this file. The caller must ensure
-#	that `cwsw.doxyfile` is included before it includes this file.
+#	config, even though it sits in close relation to this file. The caller must 
+#	ensure that `cwsw.doxyfile` is included before it includes this file.
  
 PROJECT_NAME	 = "CWSW Library Services"
 PROJECT_BRIEF	 = "Core library services for the CWSW family of components for embedded software"
@@ -16,6 +16,8 @@ MSCGEN_PATH      =
 DOT_PATH         = 
 # override default values for graph generation (to address Doxy warning in logfile)
 DOT_GRAPH_MAX_NODES    = 150
+
+WARN_LOGFILE	 = doxygen.log
 
 # pick one of the supported IDEs to enable the appropriate code macros
 PREDEFINED		+=  XPRJ_NB_Debug=1
@@ -28,7 +30,7 @@ PREDEFINED		+=  XPRJ_NB_Debug=1
 # below will be wrong. Therefore, we list here the directories that top-level doxyfile 
 # will need to specify. Consider this to be a reference.
 
-#LAYOUT_FILE	 = ../doc/Doxy_Layout.xml
+#LAYOUT_FILE	 = ../doc/doc_core/Doxy_Layout.xml
 #IMAGE_PATH		 = ../doc/images
 #EXCLUDE 		+= ../doc/images/README.md
 

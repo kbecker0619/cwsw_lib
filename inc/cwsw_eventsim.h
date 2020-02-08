@@ -1,7 +1,7 @@
 /** @file
  *	@brief	API for proposed simulated events.
  *
- *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
+ *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Jun 4, 2017
  *	@author kbecker

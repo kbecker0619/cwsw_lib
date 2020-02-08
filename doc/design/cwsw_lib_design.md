@@ -1,4 +1,4 @@
-@page Lib_Design Design: Library Subsystem
+<!-- @page Lib_Design Design: Library Subsystem -->
 
 <!-- Note: This document is not pure Markdown format: it is intended to be used inside of a
 Doxygen project, and therefore contains some embedded Doxy commands -->
@@ -22,3 +22,9 @@ Doxygen project, and therefore contains some embedded Doxy commands -->
 @page Lib_Resources	Resources Provided by and Required by the Library component
 tbd
 
+```plantuml
+@startuml
+cwsw_lib : CT_ASSERT()
+cwsw_lib : size()
+@enduml
+```

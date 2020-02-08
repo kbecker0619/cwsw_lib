@@ -3,7 +3,7 @@
 <!-- Note: This document is not pure Markdown format: it is intended to be used inside of a
 Doxygen project, and therefore contains some embedded Doxy commands -->
 
-## Purpose of Component
+# Purpose of Component
 
 The CWSW Library Component provides the foundation of the dependency tree for the CWSW suite of 
 reusable software components. They are primarily intended for use in an embedded environment, but 
@@ -32,9 +32,15 @@ requirements specific to the Library component.
 | @anchor RQT_LIB_0002 SR_LIB_0002	| Responsibilities of Initialize method | The Initialize method shall set the component's internal operating state to initial status.	| Draft		| N/A			| |
 | @anchor RQT_LIB_0003 SR_LIB_0003	| Component's Uninitialized indication	| If executed prior to initialization, the features of the component that have stateful behavior by design, shall return an `Uninitilialized` indication.	| Draft | N/A	| "Return" could be via callback, component-level attribute, function output parameter, function return code, etc. |
 | @anchor RQT_LIB_0004 SR_LIB_0004	| Component's Uninitialized behavior	| If executed prior to initialization, the features of the component that have stateful behavior by design, shall not change their operating state.			| Draft	| N/A	| |
-| **TASKING  API** ||||||
+
+### Tasking  API
+| ID 								| Title 								| Description 																					| Status 	| Trace From	| Comment 	|
+| :---:								| :---									| :---																							| :---		| :---			| :---		|
 | @anchor RQT_LIB_0200 SR_LIB_0200	| Tasking API							| The Component shall provide an API in support of OS tasks or threads.							| Draft		| N/A			| |
-| **Critical Sections / Protected Regions**	||||||
+
+### Critical Sections / Protected Regions
+| ID 								| Title 								| Description 																					| Status 	| Trace From	| Comment 	|
+| :---:								| :---									| :---																							| :---		| :---			| :---		|
 | @anchor RQT_LIB_0300 SR_LIB_0300  | Critical Section API 					| The Component shall provide an API managing Critical Sections (aka Protected Regions).    | Draft     | (tbd)         | |
 | @anchor RQT_LIB_0301 SR_LIB_0301	| Enter Critical Section API            | The Component shall provide an API for entering a Critical Section or Protected Region.	| Draft		| SR_LIB_0300	| |
 | @anchor RQT_LIB_0302 SR_LIB_0302  | Leave Critical Section API            | The Component shall provide an API for leaving a Critical Section or Protected Region.    | Draft     | SR_LIB_0300   | |
@@ -46,5 +52,3 @@ requirements specific to the Library component.
 | @anchor RQT_LIB_0308 SR_LIB_0308  | Enter Critical Section Behavior, Already Active   | If the Critical Section Nesting Level for the requested protection type is above the floor but still within the valid range, upon activating the Enter Critical Section API, no Enable Protection behavior shall be invoked.  | Draft | (tbd) | |
 | @anchor RQT_LIB_0309 SR_LIB_0309  | Leave Critical Section Behavior, Already Active   | If the Critical Section Nesting Level for the requested protection type is above the floor but still within the valid range, upon activating the Leave Critical Section API, no Disable Protection behavior shall be invoked. | Draft | (tbd) | |
 | @anchor RQT_LIB_0310 SR_LIB_0310  | Leave Critical Section Behavior, Last Deactivation| If the Critical Section Nesting Level for the requested protection type will be at the floor after decrementing, the Disable Protection behavior shall be invoked.    | Draft | (tbd) | |
-
-<br>
