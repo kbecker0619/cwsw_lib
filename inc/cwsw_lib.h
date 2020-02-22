@@ -34,7 +34,11 @@ extern "C" {
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
 
-enum eCwsw_Lib_ErrCodes { kCwsw_Lib_NoError };
+enum eErrCodes_Lib {
+	kErr_Lib_NoError,
+	kErr_Lib_NotInitialized,
+	kErr_Lib_BadParm,
+};
 
 
 // ============================================================================
