@@ -34,6 +34,13 @@ extern "C" {
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
 
+enum eErrCodes_Lib {
+	kErr_Lib_NoError,
+	kErr_Lib_NotInitialized,
+	kErr_Lib_BadParm,
+};
+
+
 // ============================================================================
 // ----	Type Definitions ------------------------------------------------------
 // ============================================================================
@@ -80,7 +87,7 @@ extern int Cwsw_Critical_Release(int cs_prot_level);
  *	the Module argument in your IDE (e.g, Eclipse, NetBeans, etc.), and select
  *	Go To Definition.
  */
-enum { Cwsw_Lib = 0 };	/**< Module-specific identifier, used in API macros */
+enum { Cwsw_Lib = 0 };	/**< Component ID for CWSW Library */
 
 /** Target symbol for Get(Cwsw_Lib, xxx) interface */
 #define Cwsw_Lib__Get(a)				Cwsw_Lib__Get_ ## a()
@@ -340,7 +347,7 @@ typedef void (*fpTask)(void);
 #define Get(component, resource)			_GET1(component, resource)
 #define _GET1(component, resource)			component ## __Get(resource)
 /** @} */
- 
+
 /** Set a module's attribute to the specified value.
  * <dl><dt><b>Usage:</b></dt><dd>Set(Module, Attribute, Value);</dd></dl>
  * <dl><dt><b>Example:</b></dt><dd><code>Set(AudioMeter, NeedleResponse, Dampening_VU);</code></dd></dl>
@@ -360,7 +367,7 @@ typedef void (*fpTask)(void);
 #define GET(item)							_GET2(item)
 #define _GET2(thing)						GET_ ## thing()
 /** @} */
- 
+
 
 /** Set the value of a global resource.
  *	<dl><dt>@b Usage: </dt><dd>SET(GlobalAttribute, Value);</dd></dl>
@@ -371,7 +378,7 @@ typedef void (*fpTask)(void);
 #define SET(item, value)					_SET2(item, value)
 #define _SET2(item, value)					SET_ ## item(value)
 /** @} */
- 
+
 
 /**	Is specified condition true?
  *	@return true if condition is true, false otherwise.
