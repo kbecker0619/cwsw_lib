@@ -35,9 +35,9 @@ extern "C" {
 // ============================================================================
 
 enum eErrCodes_Lib {
-	kErr_Lib_NoError,
-	kErr_Lib_NotInitialized,
-	kErr_Lib_BadParm,
+	kErr_Lib_NoError,       	//!< No error.
+	kErr_Lib_NotInitialized,	//!< Component or object not initialized.
+	kErr_Lib_BadParm,       	//!< Bad parameter for API call.
 };
 
 
