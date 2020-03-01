@@ -295,6 +295,10 @@ extern bool 				Cwsw_Lib__Get_Initialized(void);
  */
 #define _INIT(instance)						instance ## __Init()
 
+#define Deinit(component)	_DEINIT(component)
+#define _DEINIT(component)	component ## __Deinit()
+
+
 /**	Signature for the initialization API for the CWSW Library.
  *	@xreq{SR_LIB_0002}	(Supports)
  *

@@ -140,7 +140,7 @@ Cwsw_Lib__Init(void)
 }
 
 
-/**	@details Target for Get(Cwsw_Lib, Initialized) interface.
+/**	Target for Get(Cwsw_Lib, Initialized) interface.
  *
  *	@returns	true if component is initialized.
  *	@returns	false if the component is not initialized.
