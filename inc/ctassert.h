@@ -1,7 +1,6 @@
 /** @file
  *	@brief	Compile-time assertion capability.
  *
- *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  */
 
