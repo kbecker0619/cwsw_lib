@@ -14,13 +14,12 @@
 // ----	Include Files ---------------------------------------------------------
 // ============================================================================
 
-#include "projcfg.h"
-
 // ----	System Headers --------------------------
 #include <stdint.h>		/* uint16_t and others */
 #include <stdbool.h>
 
 // ----	Project Headers -------------------------
+#include "projcfg.h"
 
 // ----	Module Headers --------------------------
 
