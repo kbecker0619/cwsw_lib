@@ -34,6 +34,11 @@ extern "C" {
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
 
+/**	Error codes used by the CWSW Library.
+ *	The intention is that all CWSW components use this list as the basis for
+ *	their component-specific error codes.
+ *	@ingroup	cwsw_lib_object_group
+ */
 enum eErrCodes_Lib {
 	kErr_Lib_NoError,       	//!< No error.
 	kErr_Lib_NotInitialized,	//!< Component or object not initialized.
@@ -54,7 +59,6 @@ enum eErrCodes_Lib {
 // ============================================================================
 
 // ==== Discrete Functions ================================================== {
-/** Module initialization function. */
 extern uint16_t 			Cwsw_Lib__Init(void);
 
 /** @defgroup	cwsw_lib_crit_section_group	Critical Section / Protected Region API
@@ -100,9 +104,13 @@ extern bool 				Cwsw_Lib__Get_Initialized(void);
 // ====	definitions common to all environments ============================== {
 
 #if defined (__GNUC__)					/*{*/
-/** GNU's recommended implementation of macros using _Pragma keyword */
+/** GNU's recommended implementation of macros using _Pragma keyword
+ *	@ingroup	cwsw_lib_object_group
+ *	@{
+ */
 #define DO_PRAGMA(x)					DO_PRAGMA_(x)
 #define DO_PRAGMA_(x)					_Pragma(TO_STRING(x))
+/** @} */
 
 /** Building block for creating a macro to ignore a specific compiler warning. This is the
  *  argument to the "ignore" command used in the #DISABLE_WARNING macro.
