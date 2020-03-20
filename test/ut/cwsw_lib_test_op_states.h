@@ -1,6 +1,7 @@
 /** @file
  *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
+ *	\copyright
+ *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Apr 21, 2019
  *	Author: KBECKE35

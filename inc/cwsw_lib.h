@@ -1,7 +1,8 @@
 /** @file
  *	@brief	API for CWSW Library.
  *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
+ *	\copyright
+ *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Jun 4, 2017
  *	@author kbecker

@@ -1,7 +1,8 @@
 /** @file
  *	@brief	Primary Unit Test file for the CWSW Lib component.
  *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
+ *	\copyright
+ *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Nov 11, 2018
  *	@author kbecker

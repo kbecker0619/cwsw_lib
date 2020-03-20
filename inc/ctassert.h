@@ -1,7 +1,8 @@
 /** @file
  *	@brief	Compile-time assertion capability.
  *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
+ *	\copyright
+ *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  */
 
 #ifndef INCLUDE_CTASSERT_H_
