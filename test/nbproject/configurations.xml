@@ -23,11 +23,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="cwsw_lib_prj"
-                     displayName="cwsw_lib_prj"
-                     projectFiles="true">
-        <itemPath>../../cwsw_lib_prj/CritSect.c</itemPath>
-      </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>../src/cwsw_lib.c</itemPath>
       </logicalFolder>
@@ -64,7 +59,7 @@
     <Elem>cfg</Elem>
     <Elem>../src</Elem>
     <Elem>../inc</Elem>
-    <Elem>../../cwsw_lib_prj</Elem>
+    <Elem>cwsw_lib_prj</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -97,8 +92,6 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </compileType>
-      <item path="../../cwsw_lib_prj/CritSect.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="../inc/README.md" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../inc/ctassert.h" ex="false" tool="3" flavor2="0">
@@ -186,8 +179,6 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="../../cwsw_lib_prj/CritSect.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="../inc/README.md" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../inc/ctassert.h" ex="false" tool="3" flavor2="0">

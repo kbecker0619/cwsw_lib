@@ -78,7 +78,7 @@ int crit_section_line = 0;
  *	@ingroup cwsw_lib_crit_section_group
  */
 void
-cb_lib_demo_cs_enter(int protlvl, char const * const filename, int const lineno)
+cb_demo_cs_enter(int protlvl, char const * const filename, int const lineno)
 {
 	crit_section_seen = true;
 	crit_sec_prot_lvl = protlvl;
@@ -88,7 +88,7 @@ cb_lib_demo_cs_enter(int protlvl, char const * const filename, int const lineno)
 
 
 void
-cb_lib_demo_cs_leave(int protlvl, char const * const filename, int const lineno)
+cb_demo_cs_leave(int protlvl, char const * const filename, int const lineno)
 {
 	crit_section_seen = true;
 	crit_sec_prot_lvl = (0 == protlvl) ? INT_MAX : -protlvl;

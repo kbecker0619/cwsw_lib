@@ -480,6 +480,8 @@ typedef void (*fpTask)(void);
 #if defined(__GNUC__)	/* --- GNU Environment ------------------------------ */
 //	#pragma GCC diagnostic push
 //	#pragma GCC diagnostic ignored "-Wvariadic-macros"
+#elif defined(_MSC_VER)
+#pragma warning(suppress : 4127)
 #endif
 
 #define	cwsw_assert(test, descrip)	do { if(!(test)) { cwsw_assert_helper(#test, __FILE__, __LINE__, descrip); } } while(0)
@@ -487,6 +489,7 @@ extern void cwsw_assert_helper(char const * const test, char const * const filen
 
 #if defined(__GNUC__)	/* --- GNU Environment ------------------------------ */
 //	#pragma GCC diagnostic pop
+#elif defined(_MSC_VER)
 #endif
 
 // ====	/definitions common to all environments ============================= }
