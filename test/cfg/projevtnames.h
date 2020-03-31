@@ -1,11 +1,10 @@
 /** @file
- *	@brief	Project-specific event enumerations for simulated events.
+ *	@brief	Project-specific event enumerations for Demo App for Event Queue component.
+ *	@note	This file is here for demonstration purposes only, and is not instructive for real-life
+ *			usage of the Event Queue component.
  *
  *	\copyright
  *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
- *
- *	Created on: Jan 20, 2018
- *	@author kbecker
  */
 
 #ifndef UT_PROJEVTNAMES_H_
@@ -30,7 +29,6 @@ extern "C" {
 // ============================================================================
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
-#define UT_PROJEVTNAMES_H__REVSTRING "$Revision: 0123 $"
 
 /** Project-specific list of events.
  * This list must be contained inside the enumeration; the name of the enumeration tag is
@@ -45,7 +43,8 @@ enum eProjectEvents {
 	evButtonCommit,
 	evButtonReleased,
 	evUpdateUi,
-	evTerminateRequested
+	evTerminateRequested,
+	kNumOsEvqEvents
 };
 
 
