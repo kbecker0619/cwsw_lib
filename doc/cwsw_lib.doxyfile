@@ -29,22 +29,3 @@ PREDEFINED		+=  XPRJ_NB_Debug=1
 # a project-specific Doxyfile, it is almost guaranteed that the directories identified
 # below will be wrong. Therefore, we list here the directories that top-level doxyfile 
 # will need to specify. Consider this to be a reference.
-
-#LAYOUT_FILE	 = ../doc/doc_core/Doxy_Layout.xml
-#IMAGE_PATH		 = ../doc/images
-#EXCLUDE 		+= ../doc/images/README.md
-
-# specify front page for Doxy output
-#	note this makes another assumption about this file's location in the project tree
-#INPUT			 = ../README.md
-
-# component input files
-#INPUT			+= ../src
-#INPUT			+= ../inc
-#EXCLUDE		+= ../src/README.md
-#INCLUDE_PATH	+= ../inc
-
-
-# documentation inputs
-#INPUT			+= ../doc
-#EXCLUDE 		+= ../doc/README.md
