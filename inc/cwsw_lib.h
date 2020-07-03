@@ -40,7 +40,7 @@ extern "C" {
  *	their component-specific error codes.
  *	@ingroup	cwsw_lib_object_group
  */
-enum eErrCodes_Lib {
+enum eErrorCodes_Lib {
 	kErr_Lib_NoError,       	//!< No error.
 	kErr_Lib_NotInitialized,	//!< Component or object not initialized.
 	kErr_Lib_BadParm,       	//!< Bad parameter for API call.
