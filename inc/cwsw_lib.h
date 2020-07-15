@@ -35,6 +35,12 @@ extern "C" {
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
 
+/** Logical values for the LEDs and switches.
+ *	Note the actual wiring on the board, or the polarity of the driver, might be inverted;
+ *	that connection is made at the driver level, not the board level.
+ */
+enum eOnOffLogical { kLogicalOff, kLogicalOn };
+
 /**	Error codes used by the CWSW Library.
  *	The intention is that all CWSW components use this list as the basis for
  *	their component-specific error codes.
@@ -50,6 +56,9 @@ enum eErrorCodes_Lib {
 // ============================================================================
 // ----	Type Definitions ------------------------------------------------------
 // ============================================================================
+
+typedef enum eOnOffLogical		tOnOffLogical;
+
 
 // ============================================================================
 // ----	Public Variables ------------------------------------------------------
