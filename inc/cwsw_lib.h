@@ -8,8 +8,8 @@
  *	@author kbecker
  */
 
-#ifndef CWSW_LIB_H_
-#define CWSW_LIB_H_
+#ifndef CWSW_LIB_H
+#define CWSW_LIB_H
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
@@ -104,7 +104,7 @@ extern int Cwsw_Critical_Release(int cs_prot_level);
 enum { Cwsw_Lib = 0 };	/**< Component ID for CWSW Library */
 
 /** Target symbol for Get(Cwsw_Lib, xxx) interface */
-#define Cwsw_Lib__Get(a)				Cwsw_Lib__Get_ ## a()
+#define Cwsw_Lib__Get(a)	Cwsw_Lib__Get_ ## a()
 
 /** Retrieve the component's initialization status. */
 extern bool 				Cwsw_Lib__Get_Initialized(void);
@@ -114,51 +114,13 @@ extern bool 				Cwsw_Lib__Get_Initialized(void);
 // ====	definitions common to all environments ============================== {
 
 #if defined (__GNUC__)					/*{*/
-/** GNU's recommended implementation of macros using _Pragma keyword
- *	@ingroup	cwsw_lib_object_group
- *	@{
- */
-#define DO_PRAGMA(x)					DO_PRAGMA_(x)
-#define DO_PRAGMA_(x)					_Pragma(TO_STRING(x))
-/** @} */
-
-/** Building block for creating a macro to ignore a specific compiler warning. This is the
- *  argument to the "ignore" command used in the #DISABLE_WARNING macro.
- */
-#define GCC_WARNING_STRING(warnname)	"-W" TO_STRING(warnname)
-/** disable a specific warning. intended to take as a parameter, the unquoted readable name of the warning. */
-#define DISABLE_WARNING(x)				DO_PRAGMA(GCC diagnostic ignored GCC_WARNING_STRING(x))
-
-/* these are defined as parameterless-but-otherwise-FLM on purpose; right or wrong, my intention is
- * to make it clear that these are compiler directives, and do not expand to code.
- */
-#define SAVE_WARNING_CONTEXT			DO_PRAGMA(GCC diagnostic push)
-#define RESTORE_WARNING_CONTEXT			DO_PRAGMA(GCC diagnostic pop)
-
-/** Suppress non-ISO but GCC-supported extensions, such as the __FUNCTION__ macro to retrieve as a
- * 	string the current function name.
- */
-#define SUPPRESS_EXTRAISO_IDENT			SAVE_WARNING_CONTEXT; DISABLE_WARNING(pedantic)
-
-/** Implement the macro to ignore a constant expression in an if() test. GCC does not directly
- *  support this warning, but this is defined for compatibility with code that could be compiled for
- *  other compilers that do support the warning.
- */
-#define SUPPRESS_CONST_EXPR				SAVE_WARNING_CONTEXT /* no GCC compiler warning addresses this */
+#include "cwsw_lib_gnuc.h"
 
 #elif defined(_MSC_VER)					/*}{*/
+#include "cwsw_lib_msvc.h"
 
-#define DISABLE_WARNING(warn_num)		__pragma(warning(disable:warn_num))
-#define SAVE_WARNING_CONTEXT			__pragma(warning(push))
-#define RESTORE_WARNING_CONTEXT			__pragma(warning(pop))
-
-/** Suppress MSVC's complaint about an if() test using a constant expession. */
-#define SUPPRESS_CONST_EXPR				SAVE_WARNING_CONTEXT; DISABLE_WARNING(4127)
-
-/** Suppress non-ISO but GCC-supported extensions, such as the __FUNCTION__ macro to retrieve as a
- * 	string the current function name.
- */
-#define SUPPRESS_EXTRAISO_IDENT			SAVE_WARNING_CONTEXT; DISABLE_WARNING(4555)
+#elif defined (_CVI_)					/*}{*/
+#include "cwsw_lib_cvi.h"
 
 #endif									/*}*/
 
@@ -508,4 +470,4 @@ extern void cwsw_assert_helper(char const * const test, char const * const filen
 }
 #endif
 
-#endif /* CWSW_LIB_H_ */
+#endif /* CWSW_LIB_H */
