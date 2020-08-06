@@ -1,4 +1,4 @@
-@page cwsw_lib Component: CWSW Library (overview: documentation folder)
+@page cwsw_lib_doc Component: CWSW Library (overview: documentation folder)
 
 # Project-specific documentation folder for the Library component
 
