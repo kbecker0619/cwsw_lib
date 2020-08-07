@@ -1,13 +1,13 @@
-/** @file cwsw_lib_cvi.h
+/** @file
  *	@brief	LabWindows/CVI support for CWSW Library.
  *
  *	This header is designed to be included from cwsw_lib.h, not directly.
  *
+ *	\copyright
  *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Aug 1, 2020
- *	Author: kevin
+ *	@author Kevin L. Becker
  */
 
 #ifndef CWSW_LIB_CVI_H

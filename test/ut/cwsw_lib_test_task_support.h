@@ -1,14 +1,14 @@
-/** @file cwsw_lib_test_task_support.h
+/** @file
  *
  *	\copyright
  *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Apr 22, 2019
- *	Author: KBECKE35
+ *	@author Kevin L. Becker
  */
 
-#ifndef UT_CWSW_LIB_TEST_TASK_SUPPORT_H_
-#define UT_CWSW_LIB_TEST_TASK_SUPPORT_H_
+#ifndef CWSW_LIB_TEST_TASK_SUPPORT_H
+#define CWSW_LIB_TEST_TASK_SUPPORT_H
 
 #ifdef	__cplusplus
 extern "C" {
@@ -51,4 +51,4 @@ extern void test_sr_lib_0200(void);
 }
 #endif
 
-#endif /* UT_CWSW_LIB_TEST_TASK_SUPPORT_H_ */
+#endif /* CWSW_LIB_TEST_TASK_SUPPORT_H */

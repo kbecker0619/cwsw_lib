@@ -1,11 +1,11 @@
-/** @file cwsw_lib_test_op_states.c
+/** @file
  *	@brief	One-sentence short description of file.
  *
  *	\copyright
  *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Apr 21, 2019
- *	@author KBECKE35
+ *	@author Kevin L. Becker
  */
 
 // ============================================================================
