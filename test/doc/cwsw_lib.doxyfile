@@ -2,15 +2,51 @@
 #   This configuration superclasses the component-specific Doxy configuration for this project, 
 #	and provides a customization of it specifically for this stand-alone unit.
 
-# =====	Overrides provided by this doxyfile alone ======================
 # include the core (base, foundational) Doxy project settings
 @INCLUDE		 = ../../doc/doc_core/cwsw.doxyfile
-# include the actual component doxy project
-@INCLUDE		 = ../../doc/cwsw_lib.doxyfile
 
-# set the log file location
-WARN_LOGFILE	 = doxygen.log
+PROJECT_NAME	 = "CWSW Lib Component"
+PROJECT_BRIEF	 = "DOcumentation for the CWSW Library core component."
 
+# override default values for graph generation (to address Doxy warning in logfile)
+DOT_GRAPH_MAX_NODES    = 150
+
+# pick one of the supported IDEs to enable the appropriate code macros
+PREDEFINED		+=  XPRJ_NB_Debug=1
+
+GENERATE_XML           = YES
+XML_OUTPUT             = xml
+XML_PROGRAMLISTING     = NO
+
+# ==================================
+
+# Note for each section below:
+# the "STRIP_FROM_PATH" configuration is a PROJECT-SPECIFIC formatting option that applies to
+#	includes and included-by graphs. this is necessarily a project-specific configuration:
+#	we want "DIRECTORY_GRAPH" to be enabled, so that we can see a graph for folder relationships
+#	if we disable "DIRECTORY_GRAPH", the File List section of the menu pane lists only files - no
+#	directories are shown.
+#	by specifying the appropriate paths here, we can strip the "noise" introduced by the paths
+#	from the includes and included-by graphs.
+
+# ==================================
+
+# specify front page for Doxy output
+#	note this makes another assumption about this file's location in the project tree
+INPUT            = ../../README.md
+
+# documentation inputs
+INPUT			+= ../../doc
+EXCLUDE			+= ../../doc/README.md
+EXCLUDE         += ../../doc/doc_core/README.md
+
+# component input files
+INPUT			+= ../../src
+INPUT			+= ../../inc
+INPUT			+= ../../doc
+INCLUDE_PATH	+= ../../inc
+EXCLUDE         += ../../src/README.md
+EXCLUDE         += ../../doc/README.md
 
 # configuration inputs
 INPUT           += ../cfg
@@ -18,31 +54,17 @@ INCLUDE_PATH	+= ../cfg
 
 # demo app / main input files
 #   don't enable if you also enable UT as input - competing versions of main()
-#INPUT			+= ../app
+INPUT			+= ../app
 
-# Unit test inputs
-#   don't enable if you also enable app as input - competing versions of main()
-INPUT			+= ../ut
-EXCLUDE			+= ../ut/README.md
-INCLUDE_PATH	+= ../ut
-
-
-# ====== Overrides identified by the component doxyfile ================
-LAYOUT_FILE		 = ../../doc/doc_core/Doxy_Layout.xml
-IMAGE_PATH		 = ../../doc/images
-EXCLUDE 		+= ../../doc/images/README.md
-
-# specify front page for Doxy output
-#	note this makes another assumption about this file's location in the project tree
-INPUT			 = ../README.md
-
-# component input files
-INPUT			+= ../../src
-INPUT			+= ../../inc
-EXCLUDE         += ../../src/README.md
-INCLUDE_PATH	+= ../../inc
+#		# Unit test inputs
+#		#   don't enable if you also enable app as input - competing versions of main()
+#		INPUT			+= ../ut
+#		EXCLUDE			+= ../ut/README.md
+#		INCLUDE_PATH	+= ../ut
 
 
-# documentation inputs
-INPUT			+= ../../doc
-EXCLUDE			+= ../../doc/README.md
+#		# ====== Overrides identified by the component doxyfile ================
+#		LAYOUT_FILE		 = ../../doc/doc_core/Doxy_Layout.xml
+#		IMAGE_PATH		 = ../../doc/images
+#		EXCLUDE 		+= ../../doc/images/README.md
+

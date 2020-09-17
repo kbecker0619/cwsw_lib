@@ -2,6 +2,9 @@
 #   This configuration superclasses the generic Doxy configuration for this project, and provides
 #   a customization of it specifically for this component.
 
+# include the actual component doxy project
+@INCLUDE		 = doc_core/cwsw.doxyfile
+
 # USAGE NOTE:
 #	Due to the way Doxygen processes relative paths, and because we cannot know in
 #	advance the workspace relationship between this folder and the home folder of
@@ -12,7 +15,6 @@
 PROJECT_NAME	 = "CWSW Library Services"
 PROJECT_BRIEF	 = "Core library services for the CWSW family of components for embedded software"
 
-MSCGEN_PATH      = 
 DOT_PATH         = 
 # override default values for graph generation (to address Doxy warning in logfile)
 DOT_GRAPH_MAX_NODES    = 150
@@ -23,9 +25,27 @@ WARN_LOGFILE	 = doxygen.log
 PREDEFINED		+=  XPRJ_NB_Debug=1
 
 
-# NOTE:
-# within the Doxy system, all relative directories, are relative to the location of the 
-# top-level Doxyfile. Since our expectation is that this module will be "@INCLUDE"d by
-# a project-specific Doxyfile, it is almost guaranteed that the directories identified
-# below will be wrong. Therefore, we list here the directories that top-level doxyfile 
-# will need to specify. Consider this to be a reference.
+# ==================================
+
+GENERATE_XML           = YES
+XML_OUTPUT             = xml
+XML_PROGRAMLISTING     = NO
+
+
+# ==================================
+
+# Note for each section below:
+# the "STRIP_FROM_PATH" configuration is a PROJECT-SPECIFIC formatting option that applies to
+#	includes and included-by graphs. this is necessarily a project-specific configuration:
+#	we want "DIRECTORY_GRAPH" to be enabled, so that we can see a graph for folder relationships
+#	if we disable "DIRECTORY_GRAPH", the File List section of the menu pane lists only files - no
+#	directories are shown.
+#	by specifying the appropriate paths here, we can strip the "noise" introduced by the paths
+#	from the includes and included-by graphs.
+
+# ==================================
+
+# specify front page for Doxy output
+#	note this makes another assumption about this file's location in the project tree
+INPUT            = ../README.md
+

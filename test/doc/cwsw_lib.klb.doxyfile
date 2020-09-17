@@ -1,13 +1,10 @@
+# Customized Doxyfile for CWSW Lib component
+
 @INCLUDE			 = cwsw_lib.doxyfile
 
-# on windows, i don't always use the default install location. in my case, i need 
-#	a symlink at this location that points to the real installation
-PLANTUML_JAR_PATH	 = c:/_Programs/plantuml
-
-# in order for Doxy to generate graphs in multiple host environments, we expect it
-#	to be in the apps path, and we no longer specify it here.
-# DOT_PATH			 = "C:/Program Files (x86)/Graphviz2.38/bin"
-
 # disable cleanup & generate XML 'cuz i'm experimenting with something.
-DOT_CLEANUP      	 = NO
+# DOT_CLEANUP      	 = NO
 GENERATE_XML		 = YES
+
+# for some reason, neither the command-line Doxygen nor the Doxy wizard use the env-var.
+PLANTUML_JAR_PATH	 = c:/_Programs/PlantUML
