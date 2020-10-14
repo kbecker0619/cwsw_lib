@@ -111,7 +111,7 @@ Cwsw_Lib__Init(void)
 	SUPPRESS_CONST_EXPR;			/* as these are all compile-time constants, we know they're constant, and do this intenionally; suppress compiler warning for this */
 	if(	(XPRJ_Win_MinGW_Debug)	 	||  \
 		(XPRJ_Win_Cygwin_Debug_UT)	||	\
-		(XPRJ_Debug_Linux_GCC)		||  \
+		(XPRJ_Lin_GCC_Debug)		||  \
 		(XPRJ_NB_Debug)				||  \
 		(XPRJ_Win_MSVC_Debug)		||  \
 		(XPRJ_CVI_Debug) )

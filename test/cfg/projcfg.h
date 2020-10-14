@@ -92,7 +92,7 @@ extern "C" {
 	/* This configuration is created by Eclipse; we do not want it used */
 	#error For now, do not build with the "Release" build target active
 
-#elif defined(XPRJ_Debug_Linux_GCC) || defined(XPRJ_Debug_Linux_GCC_Desktop)
+#elif defined(XPRJ_Lin_GCC_Debug) || defined(XPRJ_Debug_Linux_GCC_Desktop)
 	/* This is the configuration intended for development & debugging in a Linux VM */
 	/* The 1st is intended to debug on a PowerPC Target from a Linux development environment */
 	/* The 2nd (Desktop) is intended for building within S32DS on Linux for a Linux debugging session */
@@ -106,7 +106,7 @@ extern "C" {
 	#define XPRJ_Win_MSVC_Debug			0
 	#define XPRJ_NB_Debug				0
 	#define	XPRJ_CVI_Debug				0
-	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_Lin_GCC_Debug			0
 
 #elif defined(XPRJ_Win_Cygwin_Debug_UT)
 	/* This is the configuration intended for unit test development on Windows, using GCOV */
@@ -114,12 +114,12 @@ extern "C" {
 	#define XPRJ_Win_MSVC_Debug			0
 	#define XPRJ_NB_Debug				0
 	#define	XPRJ_CVI_Debug				0
-	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_Lin_GCC_Debug			0
 
 #elif defined(XPRJ_NB_Debug)
 	#define XPRJ_Win_MinGW_Debug		0
 	#define XPRJ_Win_Cygwin_Debug_UT	0
-	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_Lin_GCC_Debug			0
 	#define XPRJ_Win_MSVC_Debug			0
 	#define	XPRJ_CVI_Debug				0
 
@@ -135,7 +135,7 @@ extern "C" {
 	 */
 	#define XPRJ_Win_MinGW_Debug		0
 	#define XPRJ_Win_Cygwin_Debug_UT	0
-	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_Lin_GCC_Debug			0
 	#define XPRJ_NB_Debug				0
 	#define	XPRJ_CVI_Debug				0
 
@@ -143,7 +143,7 @@ extern "C" {
 #error
 	#define	XPRJ_Win_MinGW_Debug 		0
 	#define XPRJ_Win_Cygwin_Debug_UT	0
-	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_Lin_GCC_Debug			0
 	#define XPRJ_NB_Debug				0
 	#define	XPRJ_Win_MSVC_Debug			0
 
@@ -156,7 +156,7 @@ extern "C" {
 
 // ==== PROJECT SPECIFIC CONSTANTS ========================================== {
 // todo: pull in stuff from gen 0 of this same project
-#if (XPRJ_Debug_Linux_GCC)
+#if (XPRJ_Lin_GCC_Debug)
 	/* enable or disable individual architectural features */
 #endif
 
@@ -203,7 +203,7 @@ extern "C" {
  *	define. Pick reasonable defaults if not defined.
  */
 #if !defined(BUILD_FOR_UNIT_TEST)
-	#if (XPRJ_Debug_Linux_GCC)		||	\
+	#if (XPRJ_Lin_GCC_Debug)		||	\
 		(XPRJ_Win_MinGW_Debug)		||	\
 		(XPRJ_Win_Cygwin_Debug_UT)	||	\
 		(XPRJ_NB_Debug)				||  \
