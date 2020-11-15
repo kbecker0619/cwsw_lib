@@ -275,6 +275,14 @@ extern bool 				Cwsw_Lib__Get_Initialized(void);
  */
 #define _INIT(instance)						instance ## __Init()
 
+/**	Module initialization, extended.
+ * 	"Just like" #Init(x), but takes an argument.
+ * 	If you need multiple parameters, then the argument should be a struct.
+ */
+#define	InitX(instance, argument)			_INITX(instance, argument)
+#define _INITX(instance, argument)			instance ## __Init(argument)
+
+
 #define Deinit(component)	_DEINIT(component)
 #define _DEINIT(component)	component ## __Deinit()
 
