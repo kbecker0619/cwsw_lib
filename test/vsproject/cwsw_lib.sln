@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cwsw_lib", "cwsw_lib.vcxproj", "{814D65A1-1D7D-8EFA-8AE7-EFF4F27E0AA8}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cwsw_lib", "cwsw_lib.vcxproj", "{8DC8E6DF-6DA0-EAAF-6CE3-E29B15966B4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{814D65A1-1D7D-8EFA-8AE7-EFF4F27E0AA8}.Debug|Win32.ActiveCfg = Debug|Win32
-		{814D65A1-1D7D-8EFA-8AE7-EFF4F27E0AA8}.Debug|Win32.Build.0 = Debug|Win32
-		{814D65A1-1D7D-8EFA-8AE7-EFF4F27E0AA8}.Release|Win32.ActiveCfg = Release|Win32
-		{814D65A1-1D7D-8EFA-8AE7-EFF4F27E0AA8}.Release|Win32.Build.0 = Release|Win32
+		{8DC8E6DF-6DA0-EAAF-6CE3-E29B15966B4A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8DC8E6DF-6DA0-EAAF-6CE3-E29B15966B4A}.Debug|Win32.Build.0 = Debug|Win32
+		{8DC8E6DF-6DA0-EAAF-6CE3-E29B15966B4A}.Release|Win32.ActiveCfg = Release|Win32
+		{8DC8E6DF-6DA0-EAAF-6CE3-E29B15966B4A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
